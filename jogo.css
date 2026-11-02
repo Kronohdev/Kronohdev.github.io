@@ -1,0 +1,55 @@
+/* páginas de jogo: base do style.css + cor de destaque de cada jogo (--destaque) e fundo da página do itch */
+.pagina-jogo { background-color: var(--noite); background-size: cover; background-attachment: fixed; background-position: center; }
+.pagina-jogo::before { content: ""; position: fixed; inset: 0; background: rgba(12, 6, 30, .72); z-index: -1; }
+.pagina-jogo strong, .pagina-jogo .ficha td:first-child { color: var(--destaque); }
+
+.nav-jogo {
+  position: sticky; top: 0; z-index: 5;
+  display: flex; align-items: center; gap: 1em; justify-content: space-between;
+  padding: .45em 1.2em; background: rgba(18, 9, 42, .95);
+  border-bottom: 3px solid var(--destaque);
+  font: 24px/1.2 var(--pixel); text-transform: uppercase; letter-spacing: .06em;
+}
+.nav-jogo a { color: var(--lavanda); text-decoration: none; }
+.nome-jogo { color: var(--destaque); }
+
+.capa-jogo { position: relative; max-width: 1200px; margin: 1.4em auto 0; padding: 0 1.2em; }
+.capa-jogo > img { width: 100%; max-height: 520px; object-fit: cover; border: 3px solid var(--tinta); box-shadow: 8px 8px 0 var(--destaque); image-rendering: auto; }
+.sobre-capa { position: absolute; left: 2.6em; bottom: 1.4em; right: 2.6em; }
+.sobre-capa h1 {
+  margin: 0; font: 64px/1 var(--pixel); letter-spacing: .06em; color: var(--branco);
+  text-shadow: 3px 3px 0 var(--tinta), 6px 6px 0 var(--destaque);
+}
+.tagline { margin: .2em 0 .4em; font: italic 22px Lora, serif; color: var(--branco); text-shadow: 2px 2px 0 var(--tinta); }
+.tags { display: flex; flex-wrap: wrap; gap: .4em; }
+.tags span { font: 18px var(--pixel); background: rgba(18, 9, 42, .85); color: var(--destaque); border: 1px solid var(--destaque); padding: 0 .5em; }
+
+.pagina-jogo main { max-width: 1200px; }
+.duas-colunas { display: grid; grid-template-columns: 1.6fr 1fr; gap: 1.4em; align-items: start; }
+.pagina-jogo h2, .pagina-jogo .titulo {
+  background: repeating-linear-gradient(0deg, var(--destaque) 0 3px, color-mix(in srgb, var(--destaque) 55%, #000) 3px 4px);
+}
+.ficha { width: 100%; border-collapse: collapse; font-size: .92em; }
+.ficha td { padding: .45em .5em; border-bottom: 1px dashed rgba(220, 210, 252, .2); vertical-align: top; }
+.ficha td:first-child { font: 20px var(--pixel); width: 38%; }
+.botao.jogar { background: var(--destaque); color: var(--tinta); font-size: 26px; }
+.aviso { font: 22px var(--pixel); color: var(--destaque); }
+
+.galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1em; }
+.galeria figure { margin: 0; background: rgba(18, 9, 42, .9); border: 2px solid var(--tinta); }
+.galeria img { width: 100%; display: block; cursor: zoom-in; image-rendering: auto; transition: transform .15s ease; }
+.galeria img:hover { transform: scale(1.02); }
+.galeria figcaption { font: 18px var(--pixel); color: var(--rosa); padding: .3em .6em; }
+.creditos { columns: 2; padding-left: 1.2em; }
+.creditos li { break-inside: avoid; margin-bottom: .3em; }
+
+#zoom { position: fixed; inset: 0; background: rgba(8, 4, 20, .94); display: none; align-items: center; justify-content: center; z-index: 20; cursor: zoom-out; padding: 2em; }
+#zoom img { max-height: 92vh; max-width: 96vw; border: 3px solid var(--destaque); image-rendering: auto; }
+
+@media (max-width: 860px) {
+  .duas-colunas { grid-template-columns: 1fr; }
+  .sobre-capa { position: static; margin-top: .8em; }
+  .sobre-capa h1 { font-size: 48px; }
+  .creditos { columns: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .galeria img { transition: none; } }

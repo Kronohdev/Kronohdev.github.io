@@ -162,3 +162,11 @@ footer { text-align: center; padding-bottom: 2em; }
   html { scroll-behavior: auto; }
   .cartao, .cartao:hover, .botao, #idioma { transition: none; transform: none; }
 }
+
+/* cartões de jogo com capa e destaque do Quórum */
+.jogos-capas { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.cartao.capa img { aspect-ratio: 630 / 500; object-fit: cover; image-rendering: auto; border-bottom: 2px solid var(--tinta); margin: -.9em -1em .4em; width: calc(100% + 2em); max-width: none; }
+.quorum-destaque > a img { display: block; width: 100%; image-rendering: auto; border: 3px solid var(--tinta); box-shadow: 8px 8px 0 #F2B705; }
+.quorum-destaque > a:hover { background: none; }
+.quorum-destaque .placa { margin-top: -2.4em; position: relative; margin-left: 2em; margin-right: 2em; }
+.jams { font-size: .92em; }

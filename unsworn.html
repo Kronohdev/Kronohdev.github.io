@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UNSWORN · NEFERO</title>
+<meta name="description" content="A turn-based tactics game with investigation, set in Irkalla; a university extension project built in Godot 4.6 with C#. Per the repo&#x27;s ROADMAP and data/README:">
+<meta property="og:title" content="UNSWORN · NEFERO">
+<meta property="og:image" content="assets/jogos/unsworn/necromante_conceito.png">
+<link rel="icon" href="assets/avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="jogo.css">
+</head>
+<body class="lang-en pagina-jogo" style="--destaque:#9fd3c7;">
+<nav class="nav-jogo">
+  <a href="index.html#games">← <span class="en">All games</span><span class="pt">Todos os jogos</span></a>
+  <span class="nome-jogo">UNSWORN</span>
+  <button id="idioma" type="button" aria-label="Switch language">PT</button>
+</nav>
+<header class="capa-jogo">
+  <img src="assets/jogos/unsworn/necromante_conceito.png" alt="UNSWORN">
+  <div class="sobre-capa">
+    <h1>UNSWORN</h1>
+    <p class="tagline">UNSWORN — investigacao e tatica em Irkalla.</p>
+    <div class="tags"></div>
+  </div>
+</header>
+<main>
+  <div class="duas-colunas">
+    <section class="placa">
+      <h2><span class="en">About the game</span><span class="pt">Sobre o jogo</span></h2>
+      <p class="en">A turn-based tactics game with investigation, set in Irkalla; a university extension project built in Godot 4.6 with C#. Per the repo&#x27;s ROADMAP and data/README: you play a Necromancer; board combat uses an agility-based turn &#x27;Tape&#x27; (Fita), Conjure abilities (raise corpses as units, Devour, Hasten/Hold, Name), a &#x27;Vestige&#x27; economy and six elements in three opposing pairs (Bone/Flesh, Memory/Oblivion, Name/Silence). The investigation spans a 7-day week with suspects, interrogations, testimony fragments, corpses on the Autopsy Table and an accusation on day 7. The simulation core is pure C#, tested with xUnit, and content is authored as .tres Resources.</p>
+      <p class="pt">Jogo tático por turnos com investigação, ambientado em Irkalla; projeto de extensão universitária feito em Godot 4.6 com C#. Segundo o ROADMAP e o data/README do repositório: o jogador controla um Necromante; o combate em tabuleiro usa uma &#x27;Fita&#x27; de turnos por agilidade, habilidades de Conjurar (Levantar cadáveres como unidades, Devorar, Apressar/Reter, Nome), uma economia de &#x27;Vestígio&#x27; e um sistema de seis elementos em três pares opostos (Osso/Carne, Memória/Esquecimento, Nome/Silêncio). A investigação dura uma semana de 7 dias, com suspeitos, interrogatórios, fragmentos de testemunho, cadáveres na Mesa de Autópsia e uma acusação no dia 7. O núcleo de simulação é C# puro, testado com xUnit, e o conteúdo entra por Resources .tres.</p>
+      <p class="aviso"><span class="en">In development: no public build yet.</span><span class="pt">Em desenvolvimento: ainda sem build pública.</span></p>
+    </section>
+    <aside class="placa">
+      <h2><span class="en">Fact sheet</span><span class="pt">Ficha</span></h2>
+      <table class="ficha"><tr><td><span class="en">Genre</span><span class="pt">Gênero</span></td><td>Tático por turnos, Investigação</td></tr>
+<tr><td><span class="en">Engine</span><span class="pt">Motor</span></td><td>Godot 4.6</td></tr>
+<tr><td><span class="en">Languages</span><span class="pt">Idiomas</span></td><td>Português, Inglês (localização PT/EN segundo o ROADMAP e data/README)</td></tr>
+<tr><td><span class="en">Made for</span><span class="pt">Feito para</span></td><td>Projeto de extensão universitária</td></tr>
+<tr><td><span class="en">Last update</span><span class="pt">Última atualização</span></td><td>2026-10-22</td></tr></table>
+    </aside>
+  </div>
+  <section>
+    <h2 class="titulo"><span class="en">Gallery</span><span class="pt">Galeria</span></h2>
+    <div class="galeria"><figure><img src="assets/jogos/unsworn/necromante_conceito.png" alt="Concept art final do Necromante" loading="lazy"><figcaption>Concept art final do Necromante</figcaption></figure><figure><img src="assets/jogos/unsworn/necromante_opcoes.png" alt="Opções de figurino do Necromante" loading="lazy"><figcaption>Opções de figurino do Necromante</figcaption></figure><figure><img src="assets/jogos/unsworn/madame_sevre_retrato.png" alt="Retrato in-game de Madame Sevre" loading="lazy"><figcaption>Retrato in-game de Madame Sevre</figcaption></figure><figure><img src="assets/jogos/unsworn/madame_sevre_figurino.png" alt="Estudo de figurino de Madame Sevre com referências" loading="lazy"><figcaption>Estudo de figurino de Madame Sevre com referências</figcaption></figure><figure><img src="assets/jogos/unsworn/lys_conceito.jpg" alt="Concept art de Lys" loading="lazy"><figcaption>Concept art de Lys</figcaption></figure><figure><img src="assets/jogos/unsworn/esbocos.jpg" alt="Esboços de personagens" loading="lazy"><figcaption>Esboços de personagens</figcaption></figure><figure><img src="assets/jogos/unsworn/peca_necromante.png" alt="Figura/peça do Necromante para o tabuleiro" loading="lazy"><figcaption>Figura/peça do Necromante para o tabuleiro</figcaption></figure><figure><img src="assets/jogos/unsworn/peca_cortesao.png" alt="Figura/peça do Cortesão para o tabuleiro" loading="lazy"><figcaption>Figura/peça do Cortesão para o tabuleiro</figcaption></figure></div>
+  </section>
+  <section class="placa"><h2><span class="en">Credits</span><span class="pt">Créditos</span></h2><ul class="creditos"><li><b>Kauã Neves (Kronohdev)</b></li></ul></section>
+</main>
+<footer>
+  <img src="assets/bando.gif" alt="" class="faixa pixel">
+  <p><a href="index.html">NEFERO</a> · Kauã Neves</p>
+</footer>
+<div id="zoom"><img alt=""></div>
+<script src="jogo.js"></script>
+</body>
+</html>

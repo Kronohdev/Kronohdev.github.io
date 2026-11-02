@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quórum · Do bairro ao Planalto</title>
+<meta name="description" content="Quórum: a Brazilian political simulator. From city council to the Planalto.">
+<meta property="og:title" content="Quórum · Do bairro ao Planalto">
+<meta property="og:image" content="assets/jogos/quorum/key_art.jpg">
+<link rel="icon" href="assets/jogos/quorum/capsula.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root { --verde:#1B8A5A; --amarelo:#F2B705; --azul:#1F4E9C; --terra:#D9481C; --tinta:#1E1E24; --tinta-2:#2A2A32; --papel:#F4EFE4; --papel-2:#E8E0CE; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--papel) url("assets/jogos/quorum/azulejo.png") repeat; background-size:240px; color:var(--tinta); font:17px/1.65 Inter, system-ui, sans-serif; }
+a { color:var(--azul); }
+img { max-width:100%; display:block; }
+.voltar { position:fixed; top:14px; left:14px; z-index:10; font:600 15px Jost, sans-serif; background:var(--tinta); color:var(--papel); padding:.45em .9em; text-decoration:none; border-radius:2px; }
+.voltar:hover { background:var(--verde); }
+#idioma { position:fixed; top:14px; right:14px; z-index:10; font:600 15px Jost, sans-serif; background:var(--amarelo); color:var(--tinta); border:0; padding:.45em .9em; cursor:pointer; }
+body.lang-en .pt, body.lang-pt .en { display:none !important; }
+
+.capa { position:relative; background:var(--tinta); }
+.capa img.fundo { width:100%; aspect-ratio:3840/1240; object-fit:cover; }
+.capa .logo { position:absolute; left:50%; top:8%; transform:translateX(-50%); width:min(46vw,620px); }
+.faixa-br { height:10px; background:linear-gradient(90deg,var(--verde) 0 25%,var(--amarelo) 25% 50%,var(--azul) 50% 75%,var(--papel) 75%); }
+
+main { max-width:1080px; margin:0 auto; padding:0 1.2em 3em; }
+.cartao { background:var(--papel); border:2px solid var(--tinta); box-shadow:8px 8px 0 var(--tinta); padding:1.6em 2em; margin:2.4em 0; }
+.chamada { display:grid; grid-template-columns:1fr 300px; gap:2em; align-items:center; }
+.selo { display:inline-block; font:600 13px Jost, sans-serif; letter-spacing:.18em; text-transform:uppercase; color:var(--terra); }
+h1 { font:700 56px/1 Jost, sans-serif; letter-spacing:.06em; margin:.1em 0 .1em; }
+.tagline { font:500 28px/1.2 Jost, sans-serif; color:var(--verde); margin:0 0 .6em; }
+h2 { font:700 30px/1.1 Jost, sans-serif; letter-spacing:.04em; margin:0 0 .6em; padding-bottom:.25em; border-bottom:4px solid var(--amarelo); display:inline-block; }
+.pilares { display:grid; grid-template-columns:repeat(5,1fr); gap:1em; counter-reset:p; }
+.pilar { background:var(--papel-2); border-top:6px solid var(--verde); padding:1em; }
+.pilar:nth-child(2) { border-color:var(--amarelo); } .pilar:nth-child(3) { border-color:var(--azul); }
+.pilar:nth-child(4) { border-color:var(--terra); } .pilar:nth-child(5) { border-color:var(--tinta); }
+.pilar b { font:600 18px/1.2 Jost, sans-serif; display:block; margin-bottom:.4em; }
+.pilar p { margin:0; font-size:.92em; }
+ul.recursos { columns:2; column-gap:2em; padding-left:1.2em; }
+ul.recursos li { margin-bottom:.4em; break-inside:avoid; }
+.ficha { width:100%; border-collapse:collapse; font-size:.95em; }
+.ficha td { padding:.5em .7em; border-bottom:1px solid var(--papel-2); }
+.ficha td:first-child { font:600 15px Jost, sans-serif; width:34%; color:var(--tinta-2); }
+.galeria { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1em; }
+.galeria img { cursor:zoom-in; border:2px solid var(--tinta); transition:transform .15s ease; }
+.galeria img:hover { transform:translateY(-3px); box-shadow:5px 5px 0 var(--verde); }
+.nota { font-size:.9em; color:var(--tinta-2); }
+.breve { display:inline-block; margin-top:.8em; background:var(--tinta); color:var(--papel); font:600 15px Jost, sans-serif; letter-spacing:.14em; padding:.6em 1.2em; }
+footer { text-align:center; padding:2em 1em 3em; font:500 15px Jost, sans-serif; }
+#zoom { position:fixed; inset:0; background:rgba(30,30,36,.92); display:none; align-items:center; justify-content:center; z-index:20; cursor:zoom-out; padding:2em; }
+#zoom img { max-height:92vh; border:3px solid var(--papel); }
+@media (max-width:820px) { .chamada { grid-template-columns:1fr; } .pilares { grid-template-columns:1fr 1fr; } ul.recursos { columns:1; } h1 { font-size:42px; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .galeria img { transition:none; } }
+</style>
+</head>
+<body class="lang-en">
+<a class="voltar" href="index.html">← NEFERO</a>
+<button id="idioma" type="button">PT</button>
+
+<header class="capa">
+  <img class="fundo" src="assets/jogos/quorum/hero.jpg" alt="">
+  <img class="logo" src="assets/jogos/quorum/logo.png" alt="QUÓRUM">
+</header>
+<div class="faixa-br"></div>
+
+<main>
+  <section class="cartao chamada">
+    <div>
+      <span class="selo"><span class="en">Brazilian political simulator</span><span class="pt">Simulador político brasileiro</span></span>
+      <h1>QUÓRUM</h1>
+      <p class="tagline"><span class="en">From the neighborhood to the Planalto</span><span class="pt">Do bairro ao Planalto</span></p>
+      <p class="en">Start as a city councilor in your neighborhood and make it to the Planalto: a Brazilian political simulator from 1889 to the future, where every law, alliance and election depends on closing the quorum.</p>
+      <p class="pt">Comece como vereador no seu bairro e chegue ao Planalto: um simulador político brasileiro de 1889 ao futuro, onde cada lei, aliança e eleição depende de fechar o quórum.</p>
+      <p class="en"><b>Quórum</b> puts you inside Brazilian politics, from your first term on the city council to the Presidency. Run campaigns, negotiate with caucuses, write bills, face the press and govern while the economy responds to your choices. The country's history, from the Old Republic to the New Republic and beyond, is the stage: the facts, parties and institutions of each era appear as they were, and the rest is up to you.</p>
+      <p class="pt"><b>Quórum</b> coloca você dentro da política brasileira, do primeiro mandato na Câmara de vereadores até a Presidência da República. Monte campanhas, negocie com bancadas, escreva projetos de lei, enfrente a imprensa e governe com a economia respondendo às suas escolhas. A história do país, da República Velha à Nova República e além, serve de palco: os fatos, os partidos e as instituições da época aparecem como foram, e o resto é decidido por você.</p>
+      <span class="breve"><span class="en">COMING SOON TO PC</span><span class="pt">EM BREVE NO PC</span></span>
+    </div>
+    <img src="assets/jogos/quorum/capsula.jpg" alt="Quórum">
+  </section>
+
+  <section class="cartao">
+    <h2><span class="en">Five pillars</span><span class="pt">Cinco pilares</span></h2>
+    <div class="pilares">
+      <div class="pilar"><b><span class="en">The whole career</span><span class="pt">A carreira inteira</span></b>
+        <p class="en">Councilor, mayor, deputy, governor, senator, president: each office has its own screens, powers and problems.</p>
+        <p class="pt">Vereador, prefeito, deputado, governador, senador, presidente: cada cargo tem telas, poderes e problemas próprios.</p></div>
+      <div class="pilar"><b><span class="en">Politics is a sum of votes</span><span class="pt">Política é soma de votos</span></b>
+        <p class="en">On the floor you count seat by seat, negotiate amendments and close (or lose) the quorum.</p>
+        <p class="pt">No plenário você conta cadeira por cadeira, negocia emendas e fecha (ou perde) o quórum.</p></div>
+      <div class="pilar"><b><span class="en">The real Brazil as a stage</span><span class="pt">O Brasil de verdade como palco</span></b>
+        <p class="en">States, cities, elections and laws with a historical basis, from 1889 to the future, without taking sides.</p>
+        <p class="pt">Estados, cidades, eleições e leis com base histórica, de 1889 ao futuro, sem tomar partido.</p></div>
+      <div class="pilar"><b><span class="en">Consequences come back</span><span class="pt">Consequências que voltam</span></b>
+        <p class="en">Economy, press, scandals and public opinion react to what you do, week after week.</p>
+        <p class="pt">Economia, imprensa, escândalos e opinião pública reagem ao que você faz, semana a semana.</p></div>
+      <div class="pilar"><b><span class="en">Brazilian modernism</span><span class="pt">Modernismo brasileiro</span></b>
+        <p class="en">An interface inspired by Niemeyer, Athos Bulcão and Burle Marx, clear and made to be read.</p>
+        <p class="pt">Uma interface inspirada em Niemeyer, Athos Bulcão e Burle Marx, clara e feita para ser lida.</p></div>
+    </div>
+  </section>
+
+  <section class="cartao">
+    <h2><span class="en">Features</span><span class="pt">Recursos</span></h2>
+    <ul class="recursos en">
+      <li>A career from councilor to president, switching offices and profiles.</li>
+      <li>Municipal, state and national campaigns: agenda, funds, staff, polls, debates and vote counting.</li>
+      <li>A live National Congress: Chamber and Senate, caucuses, projected votes and a negotiation table.</li>
+      <li>Law Studio: bills, constitutional amendments, provisional measures and decrees, from historical templates or from scratch.</li>
+      <li>An economy with inflation, exchange rate, jobs, public accounts and economic plans.</li>
+      <li>A newspaper with headlines, scandals and public opinion.</li>
+      <li>A map of Brazil with data layers, and a city map.</li>
+      <li>An inbox with what needs your attention, advice from your chief of staff and memoirs at the end of your career.</li>
+      <li>Game modes: Career, Planalto, Scenarios, Challenges, Dynasty and Sandbox.</li>
+    </ul>
+    <ul class="recursos pt">
+      <li>Carreira de vereador a presidente, com troca de cargo e de perfil.</li>
+      <li>Campanhas municipais, estaduais e nacionais: agenda, caixa, equipe, pesquisas, debates e apuração.</li>
+      <li>Congresso Nacional em tempo real: Câmara e Senado, bancadas, votos previstos e mesa de negociação.</li>
+      <li>Estúdio de Leis: projetos de lei, PECs, MPs e decretos, começando de modelos históricos ou do zero.</li>
+      <li>Economia com inflação, câmbio, emprego, contas públicas e planos econômicos.</li>
+      <li>Jornal com manchetes, escândalos e opinião pública.</li>
+      <li>Mapa do Brasil com camadas de dados e mapa da cidade.</li>
+      <li>Caixa de entrada com o que pede a sua atenção, conselhos do chefe de gabinete e memórias no fim da carreira.</li>
+      <li>Modos de jogo: Carreira, Planalto, Cenários, Desafios, Dinastia e Sandbox.</li>
+    </ul>
+  </section>
+
+  <section class="cartao">
+    <h2><span class="en">Art</span><span class="pt">Arte</span></h2>
+    <div class="galeria">
+      <img src="assets/jogos/quorum/key_art.jpg" alt="Key art">
+      <img src="assets/jogos/quorum/header.jpg" alt="Header capsule">
+      <img src="assets/jogos/quorum/cartaz.jpg" alt="Poster">
+      <img src="assets/jogos/quorum/prancha_02_conceito.jpg" alt="Brand concept">
+      <img src="assets/jogos/quorum/prancha_03_niveis.jpg" alt="Brand symbol levels">
+    </div>
+    <p class="nota"><span class="en">Gameplay screenshots coming soon.</span><span class="pt">Capturas de gameplay em breve.</span></p>
+  </section>
+
+  <section class="cartao">
+    <h2><span class="en">Fact sheet</span><span class="pt">Ficha</span></h2>
+    <table class="ficha">
+      <tr><td><span class="en">Title</span><span class="pt">Título</span></td><td>Quórum</td></tr>
+      <tr><td>Tagline</td><td><span class="en">From the neighborhood to the Planalto</span><span class="pt">Do bairro ao Planalto</span></td></tr>
+      <tr><td><span class="en">Genre</span><span class="pt">Gênero</span></td><td><span class="en">Political simulator, strategy</span><span class="pt">Simulador político, estratégia</span></td></tr>
+      <tr><td><span class="en">Platform</span><span class="pt">Plataforma</span></td><td>PC (Windows)</td></tr>
+      <tr><td><span class="en">Engine</span><span class="pt">Motor</span></td><td>Godot 4.6</td></tr>
+      <tr><td><span class="en">Development</span><span class="pt">Desenvolvimento</span></td><td>Kauã Neves (Kronohdev)</td></tr>
+      <tr><td><span class="en">Language</span><span class="pt">Idioma</span></td><td><span class="en">Brazilian Portuguese (English planned)</span><span class="pt">Português do Brasil (inglês planejado)</span></td></tr>
+    </table>
+  </section>
+</main>
+<div class="faixa-br"></div>
+<footer><a href="index.html">← NEFERO</a> · Quórum · <span class="en">From the neighborhood to the Planalto</span><span class="pt">Do bairro ao Planalto</span></footer>
+
+<div id="zoom"><img alt=""></div>
+<script>
+const b=document.getElementById("idioma");
+function lang(l){document.body.classList.toggle("lang-pt",l==="pt");document.body.classList.toggle("lang-en",l!=="pt");b.textContent=l==="pt"?"EN":"PT";localStorage.setItem("nefero-lang",l);}
+b.onclick=()=>lang(document.body.classList.contains("lang-pt")?"en":"pt");
+lang(localStorage.getItem("nefero-lang")||(navigator.language.startsWith("pt")?"pt":"en"));
+const z=document.getElementById("zoom");
+document.querySelectorAll(".galeria img").forEach(i=>i.onclick=()=>{z.querySelector("img").src=i.src;z.style.display="flex";});
+z.onclick=()=>z.style.display="none";
+</script>
+</body>
+</html>

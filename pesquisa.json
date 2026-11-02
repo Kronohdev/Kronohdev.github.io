@@ -1,0 +1,385 @@
+{
+  "jogos": [
+    {
+      "slug": "saideira",
+      "titulo": "Saideira",
+      "url_itch": "https://hftsproductionsofc.itch.io/saideira",
+      "url_jogar": "https://hftsproductionsofc.itch.io/saideira",
+      "como_jogar": "Download (builds 'Saideira' e 'Saideira Linux' na página do itch). O texto da página diz 'Windows only for now'; o painel do itch lista Windows e Linux.",
+      "tagline": "Just one more round...",
+      "generos": [
+        "Card Game"
+      ],
+      "tags": [
+        "2D",
+        "3D",
+        "Atmospheric",
+        "First-Person",
+        "Horror",
+        "Psychological Horror",
+        "Retro",
+        "Story Rich"
+      ],
+      "plataformas": [
+        "Windows",
+        "Linux"
+      ],
+      "engine": "",
+      "idiomas": [
+        "English",
+        "Portuguese (Brazil)"
+      ],
+      "acessibilidade": [
+        "Subtitles",
+        "High-contrast"
+      ],
+      "controles": "Teclado, mouse ou gamepad",
+      "duracao_media": "About a half-hour",
+      "status": "In development",
+      "equipe": {
+        "autores_itch": [
+          "HFTS PRODUCTIONS",
+          "Neferoo"
+        ],
+        "creditos_detalhados": []
+      },
+      "evento": "GameJamPlus 26/27 - 11th Edition (Gamejam+ 2026)",
+      "url_evento": "https://itch.io/jam/gamejamplus-2627",
+      "data_publicacao": "2026-10-18",
+      "data_atualizacao": "2026-10-19",
+      "descricao_en": "One more hand. One more drink. One of you is lying. It is three in the morning and your car just gave up on a road with nobody on it. The only light for miles is a neon sign: BAR. One man is still at the table, in a hat, shuffling a deck like he has been waiting for you. He wants a game of Truco, the loud, bluffing card game everybody in Brazil learns at a family table. The catch: he cheats. So do you. Look at him, or look at the table: you can never do both. Peek at his cards, hide one up your sleeve, mark the deck, buy time with a shot of cachaça; every trick makes noise. There is no 'accuse' button: you point at the proof. Each time you catch him, a little more of what is underneath the mask shows. Your money is your life; every defeat teaches you a dirtier trick, and when your pockets are empty he bets your soul. A narrator tells your night in verse, the way old cordel poems are told. Two endings: you walk out, or you stay. Three difficulties (Easy, Normal, Hard). Play in Portuguese or English, with keyboard, mouse or gamepad. Saideira was made for Gamejam+ 2026 by HFTS PRODUCTIONS.",
+      "descricao_pt": "Mais uma mão. Mais uma dose. Um de vocês está mentindo. São três da manhã e seu carro morre numa estrada vazia; a única luz é um letreiro de neon: BAR. Na mesa, um homem de chapéu embaralha as cartas como se esperasse por você e quer jogar Truco. O problema: ele rouba. Você também. Olhe para ele ou para a mesa, nunca as duas coisas ao mesmo tempo. Espie as cartas dele, esconda uma na manga, marque o baralho, ganhe tempo com uma dose de cachaça; toda trapaça faz barulho. Não existe botão de 'acusar': você aponta a prova. A cada flagra, a máscara dele racha um pouco mais. Seu dinheiro é sua vida; cada derrota ensina um truque mais sujo e, quando o bolso esvazia, ele aposta sua alma. Um narrador conta a noite em versos, como no cordel. Dois finais: você sai, ou você fica. Três dificuldades (Fácil, Normal, Difícil). Em português ou inglês, com teclado, mouse ou gamepad. Feito para a Gamejam+ 2026 pela HFTS PRODUCTIONS. (Resumo/tradução do texto oficial em inglês.)",
+      "imagens": [
+        {
+          "arquivo": "assets/jogos/saideira/capa.png",
+          "legenda": "Capa do itch (630x500)"
+        },
+        {
+          "arquivo": "assets/jogos/saideira/keyart.png",
+          "legenda": "Arte-chave com o logo (banner do topo da página)"
+        },
+        {
+          "arquivo": "assets/jogos/saideira/fundo.png",
+          "legenda": "Textura de fundo da página do itch (escura, decorativa)"
+        },
+        {
+          "arquivo": "assets/jogos/saideira/shot1.png",
+          "legenda": "O homem de chapéu revela sua forma demoníaca"
+        },
+        {
+          "arquivo": "assets/jogos/saideira/shot2.png",
+          "legenda": "Abertura: o carro na estrada deserta à noite"
+        },
+        {
+          "arquivo": "assets/jogos/saideira/shot3.png",
+          "legenda": "Interior do bar, com a porta aberta para a estrada"
+        },
+        {
+          "arquivo": "assets/jogos/saideira/shot4.png",
+          "legenda": "O homem de chapéu à mesa de Truco"
+        },
+        {
+          "arquivo": "assets/jogos/saideira/shot5.png",
+          "legenda": "Menu principal ('a última da noite')"
+        },
+        {
+          "arquivo": "assets/jogos/saideira/trapaca.gif",
+          "legenda": "GIF da seção 'The catch: he cheats. So do you.'"
+        },
+        {
+          "arquivo": "assets/jogos/saideira/mascara.gif",
+          "legenda": "GIF da seção 'Every proof breaks him a little more' (retrato do homem de chapéu)"
+        },
+        {
+          "arquivo": "assets/jogos/saideira/final_sai.gif",
+          "legenda": "Final 'You walk out.'"
+        },
+        {
+          "arquivo": "assets/jogos/saideira/final_fica.gif",
+          "legenda": "Final 'You stay.'"
+        }
+      ]
+    },
+    {
+      "slug": "coiotes-dawn",
+      "titulo": "Coiote's Dawn",
+      "url_itch": "https://hftsproductionsofc.itch.io/coiotes-dawn",
+      "url_jogar": "https://hftsproductionsofc.itch.io/coiotes-dawn",
+      "como_jogar": "Download para Windows (arquivo 'Coiote's Dawn - The curse Update.exe').",
+      "tagline": "Sobreviva o dia. Domine a noite.",
+      "generos": [
+        "Adventure",
+        "Action",
+        "Survival"
+      ],
+      "tags": [
+        "Indie",
+        "No AI",
+        "Singleplayer",
+        "survivor-like"
+      ],
+      "plataformas": [
+        "Windows"
+      ],
+      "engine": "Godot (também Clip Studio Paint, segundo 'Made with')",
+      "idiomas": [
+        "Portuguese (Brazil)"
+      ],
+      "controles": "Teclado e mouse",
+      "duracao_media": "About a half-hour",
+      "status": "In development",
+      "avaliacao_itch": "5.0/5 (3 avaliações)",
+      "equipe": {
+        "autores_itch": [
+          "HFTS PRODUCTIONS"
+        ],
+        "creditos_detalhados": [
+          {
+            "nome": "Kauã Neves",
+            "funcao": "Programador, Game Designer, Produtor Musical, Diretor Criativo"
+          },
+          {
+            "nome": "Carlos Magno",
+            "funcao": "Programador"
+          },
+          {
+            "nome": "João Vitor Gusmão",
+            "funcao": "Programador"
+          },
+          {
+            "nome": "Heitor Gomes",
+            "funcao": "Programador"
+          },
+          {
+            "nome": "Maria Luiza Vieira",
+            "funcao": "Prop Artist, UI Designer, Direção de Arte"
+          },
+          {
+            "nome": "Alice Cohen",
+            "funcao": "Animação 2D, Character Design"
+          },
+          {
+            "nome": "Luíza Corrêa",
+            "funcao": "Concept Art, Commercial Art"
+          }
+        ]
+      },
+      "evento": "DJUFF GameJam 2026 (2 a 11 de junho de 2026; 'a maior Game Jam universitária do Brasil', em parceria com a ACJOGOS-RJ, segundo a página da jam)",
+      "url_evento": "https://itch.io/jam/djuff-gamejam-2026",
+      "data_publicacao": "",
+      "data_atualizacao": "2026-08-17 (devlog 'Coiote's Dawn - The Curse update')",
+      "contato": "hftsoficial@gmail.com",
+      "descricao_pt": "Sob a lua, o caçador... Sob o sol, a presa. Neste survivor-like você entra na pele de um coiote tentando sobreviver a um campo aberto implacável, onde o relógio dita as leis da natureza. Explore mais de 887 mil combinações de builds, dentre 6 armas base, 15 itens passivos e suas 17 contrapartes amaldiçoadas! Encontre a sua resposta para sobreviver a múltiplas hordas e 3 bosses com características únicas. Itens amaldiçoados (update The Curse): todo item do jogo possui um gêmeo sombrio, drenado de cor e queimando com fogo roxo, que oferece bônus drásticos mas sempre cobra um preço (ex.: dobrar o dano ao custo da velocidade, ou triplicar a experiência ao custo da Sorte). Eles são desbloqueados no Dream Market e surgem em baús dropados por Bosses (garantido) ou Elites (chance rara).",
+      "descricao_en": "Under the moon, the hunter... Under the sun, the prey. In this survivor-like you play as a coyote trying to survive a relentless open field, where the clock sets the laws of nature. Explore over 887 thousand build combinations across 6 base weapons, 15 passive items and their 17 cursed counterparts, and find your way to survive multiple hordes and 3 bosses with unique traits. Cursed items (The Curse update): every item has a dark twin, drained of color and burning with purple fire, granting drastic bonuses at a price (e.g. double damage at the cost of speed, or triple experience at the cost of Luck). They are unlocked in the Dream Market and drop from chests left by Bosses (guaranteed) or Elites (rare). (Tradução do texto oficial em português.)",
+      "imagens": [
+        {
+          "arquivo": "assets/jogos/coiotes-dawn/capa.png",
+          "legenda": "Capa do itch com o logo (630x500)"
+        },
+        {
+          "arquivo": "assets/jogos/coiotes-dawn/logo.png",
+          "legenda": "Logo do jogo (banner do topo)"
+        },
+        {
+          "arquivo": "assets/jogos/coiotes-dawn/fundo.png",
+          "legenda": "Fundo da página do itch: dois coiotes em moldura decorativa"
+        },
+        {
+          "arquivo": "assets/jogos/coiotes-dawn/gif1.gif",
+          "legenda": "Gameplay: o coiote enfrenta a horda"
+        },
+        {
+          "arquivo": "assets/jogos/coiotes-dawn/gif2.gif",
+          "legenda": "Gameplay: ataque em área contra inimigos"
+        },
+        {
+          "arquivo": "assets/jogos/coiotes-dawn/gif3.gif",
+          "legenda": "Gameplay: combate no nível 2"
+        },
+        {
+          "arquivo": "assets/jogos/coiotes-dawn/shot1.png",
+          "legenda": "Menu principal junto à fogueira"
+        },
+        {
+          "arquivo": "assets/jogos/coiotes-dawn/shot2.png",
+          "legenda": "Tela 'Registro dos Sonhos' (melhor desempenho)"
+        },
+        {
+          "arquivo": "assets/jogos/coiotes-dawn/shot3.png",
+          "legenda": "Tela 'Mercado dos Sonhos' (árvore de habilidades)"
+        },
+        {
+          "arquivo": "assets/jogos/coiotes-dawn/grimorio.png",
+          "legenda": "Banner 'Mestre do Grimório' da página"
+        },
+        {
+          "arquivo": "assets/jogos/coiotes-dawn/controles_titulo.png",
+          "legenda": "Título 'Controles' (arte da página)"
+        },
+        {
+          "arquivo": "assets/jogos/coiotes-dawn/controles.png",
+          "legenda": "Controles: WASD, Espaço/clique, E, TAB, ESC"
+        },
+        {
+          "arquivo": "assets/jogos/coiotes-dawn/creditos_titulo.png",
+          "legenda": "Título 'Créditos' (arte pequena da página)"
+        }
+      ]
+    },
+    {
+      "slug": "o-plano",
+      "titulo": "O Plano",
+      "url_itch": "https://neferoo.itch.io/oplano",
+      "url_jogar": "https://neferoo.itch.io/oplano",
+      "como_jogar": "Jogável no navegador (HTML5) na página do itch.",
+      "tagline": "",
+      "generos": [
+        "Interactive Fiction",
+        "Visual Novel"
+      ],
+      "tags": [
+        "Indie",
+        "journaling",
+        "No AI",
+        "Point & Click",
+        "Singleplayer"
+      ],
+      "plataformas": [
+        "HTML5 (navegador)"
+      ],
+      "engine": "Unity (também Clip Studio Paint, segundo 'Made with')",
+      "idiomas": [
+        "Portuguese (Brazil)"
+      ],
+      "controles": "Mouse",
+      "duracao_media": "About a half-hour",
+      "status": "In development",
+      "avaliacao_itch": "5.0/5 (1 avaliação)",
+      "equipe": {
+        "autores_itch": [
+          "Neferoo",
+          "mitaralho",
+          "Ciensay",
+          "0bazel",
+          "akaendora",
+          "Aregularis",
+          "HFTS PRODUCTIONS"
+        ],
+        "creditos_detalhados": []
+      },
+      "evento": "Game Jam DJUFF 2025 (16 a 23 de junho de 2025)",
+      "url_evento": "https://itch.io/jam/game-jam-djuff-2025",
+      "data_publicacao": "2025-06-23 (devlog 'GameJam': build 'O Plano_v0.0.2(Submition Jam)')",
+      "data_atualizacao": "2025-06-28 (devlog 'Novo Update': versão 1.1.0, primeiro major update: seleção de duração em dias, Hard Mode, 1 nova música, 300+ notícias, melhorias visuais, pós-processamento, balanceamento, cutscene inicial, correções)",
+      "descricao_pt": "Em \"O Plano\", você e seus colegas jornalistas são forçados a uma tarefa sombria: \"monitorar\" e \"corrigir\" as notícias sob um novo regime. Após um golpe de Estado de extrema-direita, a imprensa virou ferramenta de propaganda, e a desinformação se espalha como uma praga. Mas suas convicções não permitirão que a verdade seja calada. Juntos, vocês devem navegar por um campo minado de censura, alterando as notícias para agradar os ditadores enquanto, secretamente, escondem a verdade por trás das mentiras do governo. Seu objetivo é garantir que a população não seja completamente dominada pela propaganda, tudo isso sem serem pegos. \"O Plano\" é um suspense, um puzzle point & click que te transporta para uma sociedade distópica em um futuro assustadoramente possível. Você está pronto para lutar pela verdade? Ou o regime ditatorial lhe apetece?",
+      "descricao_en": "In \"O Plano\" (\"The Plan\"), you and your fellow journalists are forced into a grim task: to \"monitor\" and \"correct\" the news under a new regime. After a far-right coup d'état, the press has become a propaganda tool and disinformation spreads like a plague. But your convictions won't let the truth be silenced. Together you must navigate a minefield of censorship, altering the news to please the dictators while secretly hiding the truth behind the government's lies. Your goal is to keep the population from being completely dominated by propaganda, all without getting caught. A suspense point & click puzzle game set in a dystopian society in a frighteningly possible future. (Tradução do texto oficial em português.)",
+      "imagens": [
+        {
+          "arquivo": "assets/jogos/o-plano/capa.png",
+          "legenda": "Capa/arte-chave: mesa com computador e mãos com canetas ao redor (1980x1080; é também o banner e a única screenshot da página)"
+        },
+        {
+          "arquivo": "assets/jogos/o-plano/titulo.png",
+          "legenda": "Título 'O Plano' (arte pequena da descrição)"
+        },
+        {
+          "arquivo": "assets/jogos/o-plano/fundo.png",
+          "legenda": "Textura de fundo da página do itch (escura, decorativa)"
+        }
+      ]
+    },
+    {
+      "slug": "unsworn",
+      "titulo": "UNSWORN",
+      "url_itch": "",
+      "url_jogar": "",
+      "como_jogar": "Sem build pública encontrada; repositório privado (Kronohdev/unsworn).",
+      "tagline": "UNSWORN — investigacao e tatica em Irkalla.",
+      "generos": [
+        "Tático por turnos",
+        "Investigação"
+      ],
+      "tags": [],
+      "plataformas": [],
+      "engine": "Godot 4.6 (.NET / C#) · Forward+ · D3D12 · Jolt Physics",
+      "idiomas": [
+        "Português",
+        "Inglês (localização PT/EN segundo o ROADMAP e data/README)"
+      ],
+      "status": "Em desenvolvimento (ROADMAP em fases; repo criado em 2026-09-09, último push em 2026-10-22)",
+      "equipe": {
+        "autores_itch": [],
+        "creditos_detalhados": [],
+        "observacao": "README/ROADMAP não listam equipe; todos os commits do repo são de Kronohdev. O ROADMAP menciona 'direção técnica' e testar 'com o time', sem nomes."
+      },
+      "evento": "Projeto de extensão universitária (segundo o README)",
+      "url_evento": "",
+      "data_publicacao": "",
+      "data_atualizacao": "2026-10-22 (último push no repositório)",
+      "descricao_pt": "Jogo tático por turnos com investigação, ambientado em Irkalla; projeto de extensão universitária feito em Godot 4.6 com C#. Segundo o ROADMAP e o data/README do repositório: o jogador controla um Necromante; o combate em tabuleiro usa uma 'Fita' de turnos por agilidade, habilidades de Conjurar (Levantar cadáveres como unidades, Devorar, Apressar/Reter, Nome), uma economia de 'Vestígio' e um sistema de seis elementos em três pares opostos (Osso/Carne, Memória/Esquecimento, Nome/Silêncio). A investigação dura uma semana de 7 dias, com suspeitos, interrogatórios, fragmentos de testemunho, cadáveres na Mesa de Autópsia e uma acusação no dia 7. O núcleo de simulação é C# puro, testado com xUnit, e o conteúdo entra por Resources .tres.",
+      "descricao_en": "A turn-based tactics game with investigation, set in Irkalla; a university extension project built in Godot 4.6 with C#. Per the repo's ROADMAP and data/README: you play a Necromancer; board combat uses an agility-based turn 'Tape' (Fita), Conjure abilities (raise corpses as units, Devour, Hasten/Hold, Name), a 'Vestige' economy and six elements in three opposing pairs (Bone/Flesh, Memory/Oblivion, Name/Silence). The investigation spans a 7-day week with suspects, interrogations, testimony fragments, corpses on the Autopsy Table and an accusation on day 7. The simulation core is pure C#, tested with xUnit, and content is authored as .tres Resources. (Tradução/resumo do texto do repositório, em português.)",
+      "imagens": [
+        {
+          "arquivo": "assets/jogos/unsworn/necromante_conceito.png",
+          "legenda": "Concept art final do Necromante (Concept arts/Necromante/3- final concept.png)"
+        },
+        {
+          "arquivo": "assets/jogos/unsworn/necromante_opcoes.png",
+          "legenda": "Opções de figurino do Necromante (A, A², B, C)"
+        },
+        {
+          "arquivo": "assets/jogos/unsworn/madame_sevre_retrato.png",
+          "legenda": "Retrato in-game de Madame Sevre (assets/sprites/portraits)"
+        },
+        {
+          "arquivo": "assets/jogos/unsworn/madame_sevre_figurino.png",
+          "legenda": "Estudo de figurino de Madame Sevre com referências"
+        },
+        {
+          "arquivo": "assets/jogos/unsworn/lys_conceito.jpg",
+          "legenda": "Concept art de Lys"
+        },
+        {
+          "arquivo": "assets/jogos/unsworn/esbocos.jpg",
+          "legenda": "Esboços de personagens (Concept arts/IMG_6641.jpg)"
+        },
+        {
+          "arquivo": "assets/jogos/unsworn/peca_necromante.png",
+          "legenda": "Figura/peça do Necromante para o tabuleiro (fig_necromante)"
+        },
+        {
+          "arquivo": "assets/jogos/unsworn/peca_cortesao.png",
+          "legenda": "Figura/peça do Cortesão para o tabuleiro (fig_cortesao)"
+        }
+      ]
+    }
+  ],
+  "linkedin": {
+    "url": "https://www.linkedin.com/in/kaua-neves-jesus-de-paula-538b57369/",
+    "status": "indisponível (LinkedIn respondeu HTTP 999, bloqueio de acesso automatizado sem login)",
+    "cargo": "",
+    "formacao": [],
+    "experiencias": [],
+    "cursos": [],
+    "idiomas": []
+  },
+  "perfis": {
+    "neferoo_itch": "https://neferoo.itch.io",
+    "hfts_itch": "https://hftsproductionsofc.itch.io",
+    "github": "https://github.com/Kronohdev"
+  },
+  "fontes": [
+    "https://neferoo.itch.io",
+    "https://hftsproductionsofc.itch.io",
+    "https://hftsproductionsofc.itch.io/saideira",
+    "https://hftsproductionsofc.itch.io/coiotes-dawn",
+    "https://neferoo.itch.io/oplano",
+    "https://neferoo.itch.io/oplano/devlog/972454/gamejam",
+    "https://neferoo.itch.io/oplano/devlog/975250/novo-update",
+    "https://itch.io/jam/gamejamplus-2627",
+    "https://itch.io/jam/djuff-gamejam-2026",
+    "https://itch.io/jam/game-jam-djuff-2025",
+    "https://github.com/Kronohdev/unsworn (privado: README.md, ROADMAP.md, data/README.md, metadados do repo, pasta 'Concept arts/' e assets/sprites/)",
+    "https://www.linkedin.com/in/kaua-neves-jesus-de-paula-538b57369/ (bloqueado)"
+  ]
+}
