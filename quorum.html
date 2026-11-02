@@ -45,7 +45,11 @@ ul.recursos li { margin-bottom:.4em; break-inside:avoid; }
 .ficha { width:100%; border-collapse:collapse; font-size:.95em; }
 .ficha td { padding:.5em .7em; border-bottom:1px solid var(--papel-2); }
 .ficha td:first-child { font:600 15px Jost, sans-serif; width:34%; color:var(--tinta-2); }
-.galeria { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1em; }
+.galeria { display:grid; grid-template-columns:1fr .56fr; gap:1em; align-items:stretch; }
+.galeria-esq { display:grid; grid-template-columns:1fr 1fr; gap:1em; align-content:space-between; }
+.galeria-esq .larga { grid-column:1 / -1; }
+.galeria img { display:block; width:100%; box-sizing:border-box; }
+.galeria .cartaz { height:100%; object-fit:cover; }
 .galeria img { cursor:zoom-in; border:2px solid var(--tinta); transition:transform .15s ease; }
 .galeria img:hover { transform:translateY(-3px); box-shadow:5px 5px 0 var(--verde); }
 .nota { font-size:.9em; color:var(--tinta-2); }
@@ -53,7 +57,7 @@ ul.recursos li { margin-bottom:.4em; break-inside:avoid; }
 footer { text-align:center; padding:2em 1em 3em; font:500 15px Jost, sans-serif; }
 #zoom { position:fixed; inset:0; background:rgba(30,30,36,.92); display:none; align-items:center; justify-content:center; z-index:20; cursor:zoom-out; padding:2em; }
 #zoom img { max-height:92vh; border:3px solid var(--papel); }
-@media (max-width:820px) { .chamada { grid-template-columns:1fr; } .pilares { grid-template-columns:1fr 1fr; } ul.recursos { columns:1; } h1 { font-size:42px; } }
+@media (max-width:820px) { .chamada { grid-template-columns:1fr; } .pilares { grid-template-columns:1fr 1fr; } ul.recursos { columns:1; } h1 { font-size:42px; } .galeria { grid-template-columns:1fr; } .galeria .cartaz { height:auto; } }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .galeria img { transition:none; } }
 </style>
 </head>
@@ -132,11 +136,12 @@ footer { text-align:center; padding:2em 1em 3em; font:500 15px Jost, sans-serif;
   <section class="cartao">
     <h2><span class="en">Art</span><span class="pt">Arte</span></h2>
     <div class="galeria">
-      <img src="assets/jogos/quorum/key_art.jpg" alt="Key art">
-      <img src="assets/jogos/quorum/header.jpg" alt="Header capsule">
-      <img src="assets/jogos/quorum/cartaz.jpg" alt="Poster">
-      <img src="assets/jogos/quorum/prancha_02_conceito.jpg" alt="Brand concept">
-      <img src="assets/jogos/quorum/prancha_03_niveis.jpg" alt="Brand symbol levels">
+      <div class="galeria-esq">
+        <img class="larga" src="assets/jogos/quorum/key_art.jpg" alt="Key art">
+        <img src="assets/jogos/quorum/prancha_02_conceito.jpg" alt="Brand concept">
+        <img src="assets/jogos/quorum/prancha_03_niveis.jpg" alt="Brand symbol levels">
+      </div>
+      <img class="cartaz" src="assets/jogos/quorum/cartaz.jpg" alt="Poster">
     </div>
     <p class="nota"><span class="en">Gameplay screenshots coming soon.</span><span class="pt">Capturas de gameplay em breve.</span></p>
   </section>
@@ -149,7 +154,7 @@ footer { text-align:center; padding:2em 1em 3em; font:500 15px Jost, sans-serif;
       <tr><td><span class="en">Genre</span><span class="pt">Gênero</span></td><td><span class="en">Political simulator, strategy</span><span class="pt">Simulador político, estratégia</span></td></tr>
       <tr><td><span class="en">Platform</span><span class="pt">Plataforma</span></td><td>PC (Windows)</td></tr>
       <tr><td><span class="en">Engine</span><span class="pt">Motor</span></td><td>Godot 4.6</td></tr>
-      <tr><td><span class="en">Development</span><span class="pt">Desenvolvimento</span></td><td>Kauã Neves (Kronohdev)</td></tr>
+      <tr><td><span class="en">Development</span><span class="pt">Desenvolvimento</span></td><td>Kauã Neves · <a href="https://neferoo.itch.io">Neferoo</a> (itch.io) · Kronohdev (GitHub)</td></tr>
       <tr><td><span class="en">Language</span><span class="pt">Idioma</span></td><td><span class="en">Brazilian Portuguese (English planned)</span><span class="pt">Português do Brasil (inglês planejado)</span></td></tr>
     </table>
   </section>

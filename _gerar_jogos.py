@@ -72,15 +72,25 @@ def ficha(j):
     return "\n".join(linhas)
 
 
+EU = ("Neferoo", "Kauã Neves", "Kronohdev")
+
+
+def nome(n):
+    """Meu nome sempre aparece com o perfil do itch junto."""
+    if n.split(" (")[0] in EU:
+        return '<b>Kauã Neves</b> (<a href="https://neferoo.itch.io">Neferoo</a> no itch.io)'
+    return f"<b>{e(n)}</b>"
+
+
 def creditos(j):
     eq = j.get("equipe", {})
     det = eq.get("creditos_detalhados") or []
     if det:
-        itens = "".join(f"<li><b>{e(c['nome'])}</b>: {e(c['funcao'])}</li>" for c in det)
+        itens = "".join(f"<li>{nome(c['nome'])}: {e(c['funcao'])}</li>" for c in det)
     elif eq.get("autores_itch"):
-        itens = "".join(f"<li><b>{e(a)}</b></li>" for a in eq["autores_itch"])
+        itens = "".join(f"<li>{nome(a)}</li>" for a in eq["autores_itch"])
     else:
-        itens = "<li><b>Kauã Neves (Kronohdev)</b></li>"
+        itens = f"<li>{nome('Kauã Neves')}</li>"
     return f'<section class="placa"><h2>{t("creditos")}</h2><ul class="creditos">{itens}</ul></section>'
 
 

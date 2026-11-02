@@ -170,3 +170,9 @@ footer { text-align: center; padding-bottom: 2em; }
 .quorum-destaque > a:hover { background: none; }
 .quorum-destaque .placa { margin-top: -2.4em; position: relative; margin-left: 2em; margin-right: 2em; }
 .jams { font-size: .92em; }
+
+/* fora dos jogos: formação e trabalho */
+.trilha { list-style: none; padding: 0; margin: .6em 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .8em; }
+.trilha li { border-left: 4px solid var(--magenta); padding: .3em .8em; background: rgba(28, 13, 64, .7); font-size: .92em; }
+.trilha b { display: block; font: 26px/1.1 var(--pixel); color: var(--branco); letter-spacing: .04em; }
+.ferramentas { font: 22px/1.3 var(--pixel); color: var(--rosa); letter-spacing: .05em; margin-bottom: 0; }
