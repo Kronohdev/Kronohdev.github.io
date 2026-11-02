@@ -109,7 +109,7 @@ def pagina(j):
     botao = (f'<a class="botao jogar" href="{e(j["url_jogar"])}">{t("jogar")} →</a>' if j.get("url_jogar")
              else f'<p class="aviso">{t("sem_build")}</p>')
     tags = "".join(f"<span>{e(x)}</span>" for x in (j.get("tags") or [])[:8])
-    fundo = f'background-image:url("{v["fundo"]}")' if v["fundo"] else ""
+    fundo = f"background-image:url('{v['fundo']}')" if v["fundo"] else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>

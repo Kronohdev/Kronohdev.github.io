@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 520 490" role="img" aria-label="NBA half court split into the four shot zones used as features: restricted area, non-restricted paint, mid-range and three-point">
+  <title>Shot zones / Zonas de arremesso</title>
+  <!-- 3PT: a quadra inteira; as outras zonas são pintadas por cima -->
+  <rect x="0" y="0" width="500" height="470" fill="#2a1452"/>
+  <!-- meia distância: dentro do arco de 23,75 pés, linhas de canto a 3 pés -->
+  <path d="M30 0 V142 A237.5 237.5 0 0 0 470 142 V0 Z" fill="#4b2a86"/>
+  <!-- garrafão: 16 pés de largura, 19 de fundo -->
+  <rect x="170" y="0" width="160" height="190" fill="#b0418a"/>
+  <!-- área restrita: raio de 4 pés -->
+  <path d="M210 52.5 A40 40 0 0 0 290 52.5 V0 H210 Z" fill="#f58a2e"/>
+  <g fill="none" stroke="#dcd2fc" stroke-width="3" stroke-opacity=".85">
+    <rect x="0" y="0" width="500" height="470"/>
+    <path d="M30 0 V142 A237.5 237.5 0 0 0 470 142 V0"/>
+    <rect x="170" y="0" width="160" height="190"/>
+    <path d="M190 190 A60 60 0 0 0 310 190"/>
+    <path d="M210 40 V52.5 A40 40 0 0 0 290 52.5 V40"/>
+    <path d="M190 470 A60 60 0 0 1 310 470"/>
+    <line x1="220" y1="40" x2="280" y2="40" stroke-width="5"/>
+    <circle cx="250" cy="52.5" r="7.5" stroke="#ff2e88"/>
+  </g>
+  <g font-family="VT323, ui-monospace, monospace" font-size="26" fill="#fffdff" text-anchor="middle">
+    <text x="250" y="84" font-size="18" fill="#12092a">RA</text>
+    <text x="250" y="160">PAINT</text>
+    <text x="100" y="140">MID</text>
+    <text x="400" y="140">MID</text>
+    <text x="250" y="380">3PT</text>
+    <text x="250" y="406" font-size="18" fill="#dcd2fc">freq · FG%</text>
+  </g>
+</svg>

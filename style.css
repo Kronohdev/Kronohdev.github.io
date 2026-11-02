@@ -176,3 +176,28 @@ footer { text-align: center; padding-bottom: 2em; }
 .trilha li { border-left: 4px solid var(--magenta); padding: .3em .8em; background: rgba(28, 13, 64, .7); font-size: .92em; }
 .trilha b { display: block; font: 26px/1.1 var(--pixel); color: var(--branco); letter-spacing: .04em; }
 .ferramentas { font: 22px/1.3 var(--pixel); color: var(--rosa); letter-spacing: .05em; margin-bottom: 0; }
+
+/* projetos (não-jogos): cartão com miolo na cor de cada projeto */
+.projetos { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.projetos > * { grid-column: span 2; }
+.projetos > :nth-last-child(-n+2):nth-child(3n+1), .projetos > :nth-last-child(-n+2):nth-child(3n+2) { grid-column: span 3; }
+.projetos-intro { margin: -.3em 0 .9em; font-style: italic; }
+.cartao.projeto .miolo {
+  margin: -.9em -1em .4em; height: 180px; overflow: hidden; display: flex; align-items: center; justify-content: center;
+  border-bottom: 2px solid var(--tinta);
+  background: radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--destaque) 30%, var(--noite-2)), var(--noite) 75%);
+}
+.cartao.projeto .miolo img { image-rendering: auto; display: block; }
+.cartao.projeto .miolo.logo img { height: 80%; width: auto; max-width: 80%; object-fit: contain; }
+.cartao.projeto .miolo.foto img { width: 100%; height: 100%; object-fit: cover; }
+.cartao.projeto h3 { color: var(--destaque); }
+.cartao.projeto .meta i { background: var(--destaque); }
+.cartao.projeto:hover { outline-color: var(--destaque); }
+@media (max-width: 760px) {
+  .projetos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .projetos > *, .projetos > :nth-last-child(-n+2):nth-child(3n+1), .projetos > :nth-last-child(-n+2):nth-child(3n+2) { grid-column: auto; }
+  .projetos > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+  .projetos { grid-template-columns: 1fr; }
+}

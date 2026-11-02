@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Athena · NEFERO</title>
+<meta name="description" content="NBA AI Engine: game outcome prediction and tactical analysis with deep residual networks and multidimensional profiles.">
+<meta property="og:title" content="Project Athena · NEFERO">
+<meta property="og:description" content="NBA AI Engine: game outcome prediction and tactical analysis with deep residual networks and multidimensional profiles.">
+<meta property="og:image" content="assets/projetos/athena-nba/quadra.svg">
+<link rel="icon" href="assets/avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="jogo.css">
+<link rel="stylesheet" href="projeto.css">
+</head>
+<body class="lang-en pagina-jogo pagina-projeto" style="--destaque:#f58a2e">
+<nav class="nav-jogo">
+  <a href="index.html#projects">← <span class="en">All projects</span><span class="pt">Todos os projetos</span></a>
+  <span class="nome-jogo">Project Athena</span>
+  <button id="idioma" type="button" aria-label="Switch language">PT</button>
+</nav>
+<header class="capa-projeto">
+  <div class="emblema logo"><img src="assets/projetos/athena-nba/quadra.svg" alt="Project Athena"></div>
+  <div class="sobre-capa">
+    <h1>Project Athena</h1>
+    <p class="en tagline">NBA AI Engine: game outcome prediction and tactical analysis with deep residual networks and multidimensional profiles.</p><p class="pt tagline">NBA AI Engine: previsão de resultados e análise tática com redes residuais profundas e perfis multidimensionais.</p>
+    <div class="tags"><span>PyTorch</span><span>Deep learning</span><span>Sports analytics</span><span>NBA</span><span>Multi-task</span><span>Paper</span></div>
+  </div>
+</header>
+<main>
+  <div class="duas-colunas">
+    <section class="placa">
+      <h2><span class="en">About</span><span class="pt">Sobre</span></h2>
+      <p class="en"><strong>Project Athena</strong> predicts NBA games before tip-off: who wins, and by how many points. It learns from 10,412 real games and describes each team by how it actually plays right now, not by its name.</p><p class="pt">O <strong>Project Athena</strong> prevê jogos da NBA antes do apito inicial: quem ganha e por quantos pontos. Ele aprende com 10.412 jogos reais e descreve cada time pelo jeito que ele joga agora, e não pelo nome.</p><p class="en">The work became the paper <em>“NBA AI Engine: Previsão de Resultados e Análise Tática via Redes Residuais Profundas e Perfis Multidimensionais”</em>, written for the course Tópicos em Engenharia de Software I at the Institute of Computing of UFF (Niterói, 2026).</p><p class="pt">O trabalho virou o artigo <em>“NBA AI Engine: Previsão de Resultados e Análise Tática via Redes Residuais Profundas e Perfis Multidimensionais”</em>, escrito para a disciplina Tópicos em Engenharia de Software I, no Instituto de Computação da UFF (Niterói, 2026).</p><p class="en">The test is strict on purpose: the model trains on seasons 2014 to 2022 and is judged blind on 2023 and 2024. No random split, so no information from the future leaks into training.</p><p class="pt">O teste é rigoroso de propósito: o modelo treina nas temporadas de 2014 a 2022 e é avaliado às cegas em 2023 e 2024. Sem divisão aleatória, então nenhuma informação do futuro vaza para o treino.</p>
+      
+    </section>
+    <aside class="placa">
+      <h2><span class="en">Fact sheet</span><span class="pt">Ficha</span></h2>
+      <table class="ficha"><tr><td><span class="en">Type</span><span class="pt">Tipo</span></td><td><span class="en">Academic paper + code</span><span class="pt">Artigo acadêmico + código</span></td></tr>
+<tr><td><span class="en">Course</span><span class="pt">Disciplina</span></td><td>Tópicos em Engenharia de Software I</td></tr>
+<tr><td><span class="en">Where</span><span class="pt">Onde</span></td><td><span class="en">Institute of Computing, UFF · Niterói, 2026</span><span class="pt">Instituto de Computação da UFF · Niterói, 2026</span></td></tr>
+<tr><td><span class="en">Data</span><span class="pt">Dados</span></td><td><span class="en">10,412 games · 13 million play-by-play records</span><span class="pt">10.412 jogos · 13 milhões de registros de jogada a jogada</span></td></tr>
+<tr><td><span class="en">Split</span><span class="pt">Divisão</span></td><td><span class="en">Train 2014 to 2022 · blind test 2023 and 2024</span><span class="pt">Treino 2014 a 2022 · teste cego 2023 e 2024</span></td></tr>
+<tr><td>Stack</td><td>Python · PyTorch · pandas · scikit-learn · SQLite · nba_api</td></tr>
+<tr><td><span class="en">Repository</span><span class="pt">Repositório</span></td><td><span class="en">Private</span><span class="pt">Privado</span></td></tr></table>
+    </aside>
+  </div>
+  <section><div class="numeros"><div class="numero"><b><span class="en">71.2%</span><span class="pt">71,2%</span></b><span><span class="en">winner accuracy on the blind test</span><span class="pt">acerto do vencedor no teste cego</span></span></div><div class="numero"><b><span class="en">10.84</span><span class="pt">10,84</span></b><span><span class="en">points of mean absolute error on the spread</span><span class="pt">pontos de erro absoluto médio no saldo</span></span></div><div class="numero"><b><span class="en">10,412</span><span class="pt">10.412</span></b><span><span class="en">real games</span><span class="pt">jogos reais</span></span></div><div class="numero"><b>48</b><span><span class="en">dimensions in each team's identity vector</span><span class="pt">dimensões no vetor de identidade de cada time</span></span></div></div></section>
+  <section class="placa"><h2><span class="en">Winner accuracy</span><span class="pt">Acerto do vencedor</span></h2><p class="en intro">Share of games where the predicted winner was right, on a 0 to 100% scale.</p><p class="pt intro">Fração de jogos em que o vencedor previsto acertou, numa escala de 0 a 100%.</p><div class="barras"><div class="barra"><span class="rotulo"><span class="en">Always pick the home team</span><span class="pt">Sempre apostar no mandante</span></span><span class="trilho" title="Always pick the home team: 59%"><i style="width:59%"></i></span><span class="valor">59%</span></div><div class="barra"><span class="rotulo"><span class="en">Vegas and analysts (ceiling)</span><span class="pt">Vegas e analistas (teto)</span></span><span class="trilho" title="Vegas and analysts (ceiling): 68.5%"><i style="width:68.5%"></i></span><span class="valor"><span class="en">68.5%</span><span class="pt">68,5%</span></span></div><div class="barra nossa"><span class="rotulo">Project Athena</span><span class="trilho" title="Project Athena: 71.2%"><i style="width:71.2%"></i></span><span class="valor"><span class="en">71.2%</span><span class="pt">71,2%</span></span></div><div class="barra eixo" aria-hidden="true"><span></span><span class="escala"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></span><span></span></div></div><p class="en nota">The two reference lines are approximate values, as reported in the paper.</p><p class="pt nota">As duas referências são valores aproximados, como reportados no artigo.</p></section>
+  <section class="placa"><h2><span class="en">The pipeline</span><span class="pt">O pipeline</span></h2><ol class="pipeline"><li><b><span class="en">Hybrid data</span><span class="pt">Dados híbridos</span></b><p class="en">A “cold” SQLite base with 13 million play-by-play records builds each team's historical spatial profile; “hot” daily box scores keep it current.</p><p class="pt">Uma base “fria” em SQLite com 13 milhões de registros jogada a jogada monta o perfil espacial histórico; box scores diários “quentes” mantêm tudo atual.</p></li><li><b><span class="en">Features</span><span class="pt">Atributos</span></b><p class="en">Per 100 possessions, garbage time filtered out: TS%, AST/TO with Laplace smoothing, frequency and FG% in four shot zones, all Z-scored. Plus a modified Elo computed only from previous games.</p><p class="pt">Por 100 posses, sem garbage time: TS%, AST/TO com suavização de Laplace, frequência e FG% em quatro zonas de arremesso, tudo em Z-score. E um Elo modificado calculado só com jogos anteriores.</p></li><li><b>Rotational 8</b><p class="en">The 8 players with the most minutes in the last 30 days, averaged by recent minutes into a 48-dimension team identity. Injuries and load management change the vector.</p><p class="pt">Os 8 jogadores com mais minutos nos últimos 30 dias, em média ponderada pelos minutos recentes, viram uma identidade de time com 48 dimensões. Lesão e gestão de carga mudam o vetor.</p></li><li><b><span class="en">Deep ResNet</span><span class="pt">ResNet profunda</span></b><p class="en">A residual network for tabular data written from scratch in PyTorch: skip connections, GELU and LayerNorm.</p><p class="pt">Uma rede residual para dados tabulares escrita do zero em PyTorch: conexões residuais, GELU e LayerNorm.</p></li><li><b><span class="en">Two answers</span><span class="pt">Duas respostas</span></b><p class="en">Multi-task heads: win probability (sigmoid) and point spread (regression), trained with Huber loss.</p><p class="pt">Cabeças multitarefa: probabilidade de vitória (sigmoide) e saldo de pontos (regressão), treinadas com Huber loss.</p></li></ol></section>
+  <section class="placa figura-lado"><div><h2><span class="en">What the model learned</span><span class="pt">O que o modelo aprendeu</span></h2><p class="en">Efficiency beats volume. In the interpretability analysis, the TS% Z-score carried more than twice the activation weight of raw three-point attempt frequency. AST/TO came second: teams that share the ball without giving it away win.</p><p class="pt">Eficiência vence volume. Na análise de interpretabilidade, o Z-score de TS% teve mais que o dobro do peso de ativação da frequência bruta de tentativas de três. AST/TO veio em segundo: time que divide a bola sem perder a bola ganha.</p><p class="en">Blowouts are noise. In the ablation, swapping Huber loss for MSE made the spread much worse: 30-point games pulled the regression around. Huber keeps them from dominating.</p><p class="pt">Lavada é ruído. Na ablação, trocar a Huber loss por MSE piorou muito o saldo: jogos de 30 pontos de diferença puxavam a regressão. A Huber impede que eles dominem.</p><p class="en">Next: player props and a bidirectional Player Elo.</p><p class="pt">Próximos passos: player props e um Player Elo bidirecional.</p></div><figure class="galeria uma"><img src="assets/projetos/athena-nba/quadra.svg" alt="The four shot zones used as features: restricted area, non-restricted paint, mid-range and three-point, each with frequency and FG%." loading="lazy"><figcaption><span class="en">The four shot zones used as features: restricted area, non-restricted paint, mid-range and three-point, each with frequency and FG%.</span><span class="pt">As quatro zonas de arremesso usadas como atributos: área restrita, garrafão fora da área restrita, meia distância e três pontos, cada uma com frequência e FG%.</span></figcaption></figure></section>
+  <section class="placa"><h2><span class="en">Credits</span><span class="pt">Créditos</span></h2><ul class="creditos"><li><b>Kauã Neves</b> (<a href="https://neferoo.itch.io">Neferoo</a> <span class="en">on itch.io</span><span class="pt">no itch.io</span> / <a href="https://github.com/Kronohdev">Kronohdev</a> <span class="en">on GitHub</span><span class="pt">no GitHub</span>): <span class="en">Main author (Kauã Neves Jesus de Paula)</span><span class="pt">Autor principal (Kauã Neves Jesus de Paula)</span></li><li><b>Heitor Campos Cardoso de Mendonça</b>: <span class="en">Co-author</span><span class="pt">Coautor</span></li><li><b>Heitor Gomes Araújo</b>: <span class="en">Co-author</span><span class="pt">Coautor</span></li></ul></section>
+</main>
+<footer>
+  <img src="assets/bando.gif" alt="" class="faixa pixel">
+  <p><a href="index.html">NEFERO</a> · Kauã Neves</p>
+</footer>
+<div id="zoom"><img alt=""></div>
+<script src="jogo.js"></script>
+</body>
+</html>

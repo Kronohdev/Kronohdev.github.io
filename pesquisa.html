@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scientific research · NEFERO</title>
+<meta name="description" content="Computer vision at Media Lab UFF: turning ordinary street cameras into traffic sensors.">
+<meta property="og:title" content="Scientific research · NEFERO">
+<meta property="og:description" content="Computer vision at Media Lab UFF: turning ordinary street cameras into traffic sensors.">
+<meta property="og:image" content="assets/projetos/pesquisa/icarai_cameras.jpg">
+<link rel="icon" href="assets/avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="jogo.css">
+<link rel="stylesheet" href="projeto.css">
+</head>
+<body class="lang-en pagina-jogo pagina-projeto" style="--destaque:#4cc9f0">
+<nav class="nav-jogo">
+  <a href="index.html#projects">← <span class="en">All projects</span><span class="pt">Todos os projetos</span></a>
+  <span class="nome-jogo"><span class="en">Scientific research</span><span class="pt">Pesquisa científica</span></span>
+  <button id="idioma" type="button" aria-label="Switch language">PT</button>
+</nav>
+<header class="capa-projeto">
+  <div class="emblema foto"><img src="assets/projetos/pesquisa/icarai_cameras.jpg" alt="Scientific research"></div>
+  <div class="sobre-capa">
+    <h1><span class="en">Scientific research</span><span class="pt">Pesquisa científica</span></h1>
+    <p class="en tagline">Computer vision at Media Lab UFF: turning ordinary street cameras into traffic sensors.</p><p class="pt tagline">Visão computacional no Media Lab UFF: transformando câmeras de rua comuns em sensores de trânsito.</p>
+    <div class="tags"><span>Computer vision</span><span>Media Lab UFF</span><span>CNPq</span><span>Urban mobility</span><span>Traffic flow models</span></div>
+  </div>
+</header>
+<main>
+  <div class="duas-colunas">
+    <section class="placa">
+      <h2><span class="en">About</span><span class="pt">Sobre</span></h2>
+      <p class="en">I am a <strong>Computer Vision researcher at Media Lab UFF</strong>, at the Institute of Computing of Universidade Federal Fluminense, with a <strong>CNPq research grant</strong>.</p><p class="pt">Sou <strong>pesquisador em Visão Computacional no Media Lab UFF</strong>, no Instituto de Computação da Universidade Federal Fluminense, com <strong>bolsa de pesquisa do CNPq</strong>.</p><p class="en">My work so far points computer vision at the city. Niterói already has a network of public traffic cameras; the question is how much a computer can learn from them. How many cars, how fast, how dense, and what that says about the next minutes on the streets around a hospital, a beach or a university.</p><p class="pt">Até aqui, o meu trabalho aponta a visão computacional para a cidade. Niterói já tem uma rede de câmeras públicas de trânsito; a pergunta é quanto um computador consegue aprender com elas. Quantos carros, a que velocidade, com que densidade, e o que isso diz sobre os próximos minutos nas ruas em volta de um hospital, de uma praia ou de uma universidade.</p><p class="en">This page is a high-level overview. Data, results and drafts that are not public yet stay out of it.</p><p class="pt">Esta página é uma visão geral. Dados, resultados e rascunhos que ainda não são públicos ficam de fora.</p>
+      <a class="botao jogar" href="akuanduba.html"><span class="en">See Akuanduba OS</span><span class="pt">Ver o Akuanduba OS</span> →</a> 
+    </section>
+    <aside class="placa">
+      <h2><span class="en">Fact sheet</span><span class="pt">Ficha</span></h2>
+      <table class="ficha"><tr><td><span class="en">Role</span><span class="pt">Função</span></td><td><span class="en">Computer Vision Researcher</span><span class="pt">Pesquisador em Visão Computacional</span></td></tr>
+<tr><td><span class="en">Lab</span><span class="pt">Laboratório</span></td><td><span class="en">Media Lab UFF · Institute of Computing</span><span class="pt">Media Lab UFF · Instituto de Computação</span></td></tr>
+<tr><td><span class="en">Funding</span><span class="pt">Fomento</span></td><td><span class="en">CNPq research grant</span><span class="pt">Bolsa de pesquisa do CNPq</span></td></tr>
+<tr><td><span class="en">Areas</span><span class="pt">Áreas</span></td><td><span class="en">Computer vision, machine learning, urban mobility</span><span class="pt">Visão computacional, aprendizado de máquina, mobilidade urbana</span></td></tr>
+<tr><td><span class="en">Tools</span><span class="pt">Ferramentas</span></td><td>Python · OpenCV · NetworkX · OSMnx · PyTorch</td></tr>
+<tr><td><span class="en">City</span><span class="pt">Cidade</span></td><td>Niterói (RJ)</td></tr></table>
+    </aside>
+  </div>
+  <section class="placa"><h2><span class="en">Phase 1: traffic as a fluid</span><span class="pt">Fase 1: o trânsito como fluido</span></h2><p class="en">Games usually simulate traffic with one agent per car. That does not scale to a whole city in real time. The first prototype (March 2026) took the opposite road and treated traffic as a one-dimensional compressible fluid flowing through the street graph of Icaraí, with camera measurements feeding the density of each street.</p><p class="pt">Jogos costumam simular trânsito com um agente por carro. Isso não escala para uma cidade inteira em tempo real. O primeiro protótipo (março de 2026) seguiu o caminho oposto e tratou o trânsito como um fluido compressível unidimensional correndo pelo grafo das ruas de Icaraí, com as medições das câmeras alimentando a densidade de cada rua.</p><dl class="formulas"><div><dt>∂ρ/∂t + ∂q/∂x = 0</dt><dd><span class="en">continuity: cars are conserved</span><span class="pt">continuidade: carro não some</span></dd></div><div><dt>q = ρ · v(ρ)</dt><dd><span class="en">LWR model (Lighthill-Whitham-Richards)</span><span class="pt">modelo LWR (Lighthill-Whitham-Richards)</span></dd></div><div><dt>v(ρ) = v<sub>max</sub> (1 − ρ / ρ<sub>max</sub>)</dt><dd><span class="en">Greenshields speed-density law</span><span class="pt">lei velocidade-densidade de Greenshields</span></dd></div><div><dt>Δt<sub>e</sub> = L<sub>e</sub> / v<sub>e</sub>(ρ)</dt><dd><span class="en">edge cost for Dijkstra and A*: a jammed street costs infinite time</span><span class="pt">custo da aresta no Dijkstra e no A*: rua parada custa tempo infinito</span></dd></div></dl></section>
+  <section class="placa figura-lado"><div><h2><span class="en">Phase 2: from prototype to Akuanduba OS</span><span class="pt">Fase 2: do protótipo ao Akuanduba OS</span></h2><p class="en">The fluid prototype grew into <a href='akuanduba.html'>Akuanduba OS</a>: a learned forecaster replaced the hand-written physics, a reinforcement learning policy took over the traffic lights, and the ambulance router started planning on predicted traffic.</p><p class="pt">O protótipo de fluido cresceu e virou o <a href='akuanduba.html'>Akuanduba OS</a>: um previsor aprendido substituiu a física escrita à mão, uma política de aprendizado por reforço assumiu os semáforos e o roteador de ambulâncias passou a planejar sobre o trânsito previsto.</p><p class="en">One rule stayed from day one: the vision side measures traffic, not people. It works on moving pixels, with no face recognition and no plate reading.</p><p class="pt">Uma regra ficou desde o primeiro dia: a visão mede trânsito, não pessoas. Ela trabalha com pixels em movimento, sem reconhecimento facial e sem leitura de placas.</p></div><figure class="galeria uma"><img src="assets/projetos/pesquisa/icarai_cameras.jpg" alt="Icaraí building footprints (OpenStreetMap) and the locations of public municipal traffic cameras, in pink. Map data © OpenStreetMap contributors." loading="lazy"><figcaption><span class="en">Icaraí building footprints (OpenStreetMap) and the locations of public municipal traffic cameras, in pink. Map data © OpenStreetMap contributors.</span><span class="pt">Contornos dos prédios de Icaraí (OpenStreetMap) e a posição das câmeras públicas de trânsito da prefeitura, em rosa. Dados do mapa © colaboradores do OpenStreetMap.</span></figcaption></figure></section>
+  <section class="placa"><h2><span class="en">Credits</span><span class="pt">Créditos</span></h2><ul class="creditos"><li><b>Kauã Neves</b> (<a href="https://neferoo.itch.io">Neferoo</a> <span class="en">on itch.io</span><span class="pt">no itch.io</span> / <a href="https://github.com/Kronohdev">Kronohdev</a> <span class="en">on GitHub</span><span class="pt">no GitHub</span>): <span class="en">Researcher, Media Lab UFF</span><span class="pt">Pesquisador, Media Lab UFF</span></li></ul></section>
+</main>
+<footer>
+  <img src="assets/bando.gif" alt="" class="faixa pixel">
+  <p><a href="index.html">NEFERO</a> · Kauã Neves</p>
+</footer>
+<div id="zoom"><img alt=""></div>
+<script src="jogo.js"></script>
+</body>
+</html>

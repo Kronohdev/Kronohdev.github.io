@@ -1,0 +1,311 @@
+{
+  "projetos": [
+    {
+      "slug": "power-pplay",
+      "titulo": "Power PPlay",
+      "cor": "#ff3ec8",
+      "emblema": "assets/projetos/power-pplay/logo.png",
+      "emblema_tipo": "logo",
+      "cartao": ["The Python game framework taught at UFF, rebuilt: version 2.0 and 2.1, with its own IDE.", "A framework de jogos em Python ensinada na UFF, reconstruída: versões 2.0 e 2.1, com IDE própria."],
+      "tagline": ["Version 2.0 of PPlay, the Python game framework used to teach game development at UFF.", "A versão 2.0 da PPlay, a framework de jogos em Python usada para ensinar desenvolvimento de jogos na UFF."],
+      "tags": ["Python", "Pygame-CE", "Game engine", "Education", "UFF", "Electron IDE"],
+      "sobre": [
+        ["<strong>PPlay</strong> is the Python game library of the Game Programming Lab at the Institute of Computing of UFF (Universidade Federal Fluminense). It was born at UFF Medialab to teach programming through games, and it is the framework students use in the Game Development Lab course: the first game fits in under 20 lines.", "A <strong>PPlay</strong> é a biblioteca de jogos em Python do Laboratório de Programação de Jogos do Instituto de Computação da UFF. Ela nasceu no Medialab da UFF para ensinar programação por meio de jogos e é a framework que os alunos usam na disciplina de Laboratório de Desenvolvimento de Jogos: o primeiro jogo cabe em menos de 20 linhas."],
+        ["<strong>Power PPlay</strong> is my rewrite of it. Version 2.0 keeps the same simple way of writing games that students already know, but puts a modern engine underneath, built on Pygame-CE: resource caching, sub-pixel physics, a virtual resolution buffer, scenes, cameras, lighting, particles and pathfinding. Games written for the original PPlay 1.0 still run, through a retro-compatibility bridge that switches them to the new engine automatically.", "A <strong>Power PPlay</strong> é a minha reescrita dela. A versão 2.0 mantém o mesmo jeito simples de escrever jogos que os alunos já conhecem, mas coloca um motor moderno por baixo, sobre o Pygame-CE: cache de recursos, física em sub-pixel, buffer de resolução virtual, cenas, câmera, iluminação, partículas e busca de caminho. Jogos feitos para a PPlay 1.0 original continuam rodando, por uma ponte de retrocompatibilidade que os passa para o motor novo automaticamente."],
+        ["Version 2.1 builds on that base with new modules (interface, pseudo-3D, procedural generation) and a development environment of its own. Power PPlay is now the version presented on the official PPlay site.", "A versão 2.1 parte dessa base com módulos novos (interface, pseudo-3D, geração procedural) e um ambiente de desenvolvimento próprio. A Power PPlay é hoje a versão apresentada no site oficial da PPlay."]
+      ],
+      "botoes": [
+        {"rotulo": ["Source on GitHub", "Código no GitHub"], "url": "https://github.com/Kronohdev/Power-PPlay"},
+        {"rotulo": ["Official PPlay site", "Site oficial da PPlay"], "url": "https://www2.ic.uff.br/pplay/", "roxo": true}
+      ],
+      "ficha": [
+        {"k": ["Type", "Tipo"], "v": ["Game framework for teaching", "Framework de jogos para ensino"]},
+        {"k": ["Built on", "Base"], "v": "Python · Pygame-CE"},
+        {"k": ["Python", "Python"], "v": ["3.10+ (the engine code itself compiles on 3.8)", "3.10+ (o código da engine compila até no 3.8)"]},
+        {"k": ["Versions", "Versões"], "v": ["2.0 (March 2026) · 2.1 (September 2026)", "2.0 (março de 2026) · 2.1 (setembro de 2026)"]},
+        {"k": ["Where", "Onde"], "v": ["Institute of Computing, UFF · Niterói", "Instituto de Computação da UFF · Niterói"]},
+        {"k": ["IDE", "IDE"], "v": ["Electron, Windows, works offline", "Electron, Windows, funciona offline"]},
+        {"k": ["License", "Licença"], "v": "MIT"},
+        {"k": ["Repository", "Repositório"], "v": "<a href='https://github.com/Kronohdev/Power-PPlay'>Kronohdev/Power-PPlay</a>"}
+      ],
+      "secoes": [
+        {"tipo": "numeros", "itens": [
+          {"valor": "24", "rotulo": ["engine modules", "módulos na engine"]},
+          {"valor": "1.0", "rotulo": ["games still run, via the retro bridge", "jogos ainda rodam, pela ponte retrô"]},
+          {"valor": "30", "rotulo": ["student games published on the official site", "jogos de alunos publicados no site oficial"]},
+          {"valor": "F1", "rotulo": ["opens the whole manual inside the IDE", "abre o manual inteiro dentro da IDE"]}
+        ]},
+        {"tipo": "cartoes", "titulo": ["The four pillars of 2.0", "Os quatro pilares da 2.0"], "itens": [
+          {"t": ["Raw performance", "Performance bruta"], "d": ["Resource caching (one image in memory for a thousand zombies, Flyweight style) and viewport culling, so only what is on screen gets drawn.", "Cache de recursos (uma imagem na memória para mil zumbis, no padrão Flyweight) e culling de viewport, que só desenha o que está na tela."]},
+          {"t": ["Cinematic physics", "Física cinematográfica"], "d": ["A sub-pixel kinematic engine that solves one axis at a time: no corner snapping, no walking through walls, with coyote time and jump buffering built in.", "Um motor cinemático em sub-pixel que resolve um eixo de cada vez: sem engate de quina, sem atravessar parede, com coyote time e jump buffering de fábrica."]},
+          {"t": ["Resolution independence", "Independência de resolução"], "d": ["Games draw into a virtual canvas that is scaled to any monitor with letterboxing. <code>pixel_art=True</code> keeps pixel art crisp; F11 toggles fullscreen.", "O jogo desenha num canvas virtual que é escalado para qualquer monitor, com letterbox. <code>pixel_art=True</code> mantém a pixel art nítida; F11 alterna a tela cheia."]},
+          {"t": ["Abstraction and modularity", "Abstração e modularidade"], "d": ["ObjectGroup for collections, SceneManager for screens, and the Architect tool, which moves code out of a giant <code>main.py</code> into its own files.", "ObjectGroup para coleções, SceneManager para telas e a ferramenta Architect, que tira código de um <code>main.py</code> gigante e leva para arquivos próprios."]}
+        ]},
+        {"tipo": "cartoes", "titulo": ["What else is in the box", "O que mais vem na caixa"], "itens": [
+          {"t": ["Camera and parallax", "Câmera e parallax"], "d": ["A camera that follows with smoothing and world bounds, and infinite parallax layers.", "Câmera que segue com suavização e limites do mundo, e camadas de parallax infinitas."]},
+          {"t": ["Dynamic lighting", "Iluminação dinâmica"], "d": ["A darkness layer with real-time lights, for lanterns and fog of war.", "Uma camada de escuridão com luzes em tempo real, para lanternas e névoa de guerra."]},
+          {"t": ["Juice", "Juice"], "d": ["Screen shake, flashes, fades and particle emitters for game feel.", "Tremor de tela, flashes, fades e emissores de partículas para dar sensação de jogo."]},
+          {"t": ["Tweens, A* and raycasts", "Tweens, A* e raycasts"], "d": ["Easing animations, grid pathfinding and line-of-sight checks: CS algorithms applied to enemies.", "Animações com easing, busca de caminho em grade e linha de visão: algoritmos de computação aplicados a inimigos."]},
+          {"t": ["Worlds from text files", "Mundos em arquivo de texto"], "d": ["TileMap turns a <code>.txt</code> grid into a level with solid tiles and automatic culling.", "O TileMap transforma uma grade em <code>.txt</code> numa fase com blocos sólidos e culling automático."]},
+          {"t": ["Input as actions", "Entrada como ações"], "d": ["InputManager maps names like <code>\"jump\"</code> to several keys, so game logic never talks to the hardware.", "O InputManager liga nomes como <code>\"pulo\"</code> a várias teclas, e a lógica do jogo nunca fala com o hardware."]}
+        ]},
+        {"tipo": "codigo", "titulo": ["A taste of the API", "Um gostinho da API"], "intro": ["Straight from the 2.0 manual. No need to start Pygame by hand: the <code>Window</code> runs the engine's life cycle.", "Direto do manual da 2.0. Não precisa iniciar o Pygame à mão: a <code>Window</code> cuida do ciclo de vida do motor."], "blocos": [
+          {"legenda": ["Hello world", "Olá, mundo"], "linhas": [
+            "from PPlay.window import Window",
+            "from PPlay.sprite import Sprite",
+            "",
+            "janela = Window(800, 600, \"Início Rápido\")",
+            "player = Sprite(\"hero.png\")",
+            "player.set_position(400, 300)",
+            "",
+            "while True:",
+            "    janela.set_background_color(\"darkblue\")",
+            "    player.draw()",
+            "    janela.update()"
+          ]},
+          {"legenda": ["A level drawn in a text file", "Uma fase desenhada num arquivo de texto"], "linhas": [
+            "from PPlay.tilemap import TileMap",
+            "",
+            "meu_mapeamento = {",
+            "    '#': 'parede_pedra.png',",
+            "    'X': 'plataforma_madeira.png',",
+            "    '.': 'fundo_caverna.png',",
+            "    'solido': ['#', 'X']",
+            "}",
+            "mapa = TileMap(tamanho_tile=32)",
+            "mapa.carregar_mapa(\"fase1.txt\", meu_mapeamento)",
+            "solidos = mapa.get_solidos()"
+          ]}
+        ]},
+        {"tipo": "cartoes", "titulo": ["New in 2.1", "Novidades da 2.1"], "itens": [
+          {"t": ["<code>ui</code> module", "Módulo <code>ui</code>"], "d": ["Themed buttons, text inputs, sliders and panels with automatic layout and keyboard focus.", "Botões, caixas de texto, sliders e painéis com tema, layout automático e foco por teclado."]},
+          {"t": ["<code>raycaster</code>", "<code>raycaster</code>"], "d": ["Wolfenstein-style pseudo-3D with textures, fog, minimap and sprites, from the same text maps.", "Pseudo-3D no estilo Wolfenstein, com texturas, névoa, minimapa e sprites, a partir dos mesmos mapas em texto."]},
+          {"t": ["<code>procedural</code>", "<code>procedural</code>"], "d": ["Caves, tunnels and dungeons generated by algorithm, with seeds for repeatable results.", "Cavernas, túneis e masmorras geradas por algoritmo, com semente para resultados repetíveis."]},
+          {"t": ["Power PPlay IDE", "IDE Power PPlay"], "d": ["A desktop app with scene, animation and audio editors, a code editor and a debugger that stops the game on any line. It exports a Windows <code>.exe</code> or a web build, fully offline.", "Um app de desktop com editores de cena, animação e áudio, editor de código e um depurador que para o jogo em qualquer linha. Exporta <code>.exe</code> para Windows ou versão web, tudo offline."]},
+          {"t": ["Fixes that mattered", "Correções que importavam"], "d": ["Characters no longer get stuck in narrow corridors, and A* stopped treating the whole map as a wall.", "O personagem não trava mais em corredor estreito, e o A* parou de tratar o mapa inteiro como parede."]},
+          {"t": ["A complete example game", "Um jogo de exemplo completo"], "d": ["<em>Ilha das Gemas</em>: a platformer whose art, sound and level were all generated by code, showing every feature of the engine.", "<em>Ilha das Gemas</em>: um plataforma com arte, som e fase gerados por código, mostrando cada recurso da engine."]}
+        ]},
+        {"tipo": "galeria", "titulo": ["The IDE", "A IDE"], "itens": [
+          {"arquivo": "gerenciador.jpg", "legenda": ["Project manager", "Gerenciador de projetos"]},
+          {"arquivo": "cena.jpg", "legenda": ["Scene editor with map layers and inspector", "Editor de cena com camadas de mapa e inspetor"]},
+          {"arquivo": "jogo_encaixado.jpg", "legenda": ["The game running docked inside the IDE", "O jogo rodando encaixado dentro da IDE"]},
+          {"arquivo": "depuracao.jpg", "legenda": ["Debugger: breakpoints, variables and frame stats", "Depurador: breakpoints, variáveis e estatísticas por quadro"]},
+          {"arquivo": "animacao.jpg", "legenda": ["Sprite sheet animation editor", "Editor de animação por folha de sprites"]},
+          {"arquivo": "projeto_web.jpg", "legenda": ["Publishing the game for the web", "Publicando o jogo para a web"]}
+        ]}
+      ],
+      "creditos": [
+        {"nome": "EU", "funcao": ["Architect and developer of 2.0, creator of 2.1 and the IDE", "Arquiteto e desenvolvedor da 2.0, criador da 2.1 e da IDE"]},
+        {"nome": "Prof. Esteban Clua", "funcao": ["Professor responsible for PPlay · PPlay 1.0", "Professor responsável pela PPlay · PPlay 1.0"]},
+        {"nome": "Prof. Anselmo Montenegro", "funcao": ["PPlay 1.0", "PPlay 1.0"]},
+        {"nome": "Gabriel Saldanha", "funcao": ["Original PPlay team", "Equipe original da PPlay"]},
+        {"nome": "Adônis Gasiglia", "funcao": ["Original PPlay team", "Equipe original da PPlay"]},
+        {"nome": "Yuri Nogueira", "funcao": ["Original PPlay team", "Equipe original da PPlay"]},
+        {"nome": "Sergio Herman", "funcao": ["PPlay 1.0 legacy · original site theme", "Legado da PPlay 1.0 · tema original do site"]}
+      ]
+    },
+    {
+      "slug": "akuanduba",
+      "titulo": "Akuanduba OS",
+      "cor": "#39d98a",
+      "emblema": "assets/projetos/akuanduba/icarai_3d.jpg",
+      "emblema_tipo": "foto",
+      "cartao": ["A digital twin of Niterói's traffic: cameras, graph forecasting, RL traffic lights and ambulance routing.", "Um gêmeo digital do trânsito de Niterói: câmeras, previsão em grafo, semáforos por RL e rotas de ambulância."],
+      "tagline": ["A cyber-physical digital twin for urban traffic control and predictive emergency dispatch, built and tested with real data from Niterói.", "Um gêmeo digital ciberfísico para controle de tráfego urbano e despacho preditivo de emergências, construído e testado com dados reais de Niterói."],
+      "tags": ["Digital twin", "Computer vision", "Graph neural networks", "Reinforcement learning", "PyTorch", "Niterói"],
+      "sobre": [
+        ["<strong>Akuanduba OS</strong> runs a full smart-city loop on ordinary hardware, CPU only, no GPU. It watches the streets through the city's public traffic cameras, forecasts how traffic will flow over the next hour, drives the traffic lights with a learned policy, and routes ambulances using the <em>predicted</em> traffic instead of the current one.", "O <strong>Akuanduba OS</strong> roda um ciclo completo de cidade inteligente em hardware comum, só CPU, sem GPU. Ele observa as ruas pelas câmeras públicas de trânsito da cidade, prevê como o tráfego vai fluir na próxima hora, controla os semáforos com uma política aprendida e roteia ambulâncias usando o trânsito <em>previsto</em>, e não o atual."],
+        ["It was built and evaluated in Icaraí, Niterói (RJ), with real vehicle counts provided by NITTRANS under a technical cooperation agreement, and submitted to the 32nd <strong>Prêmio Jovem Cientista</strong> (CNPq), whose theme was <em>Artificial Intelligence for the Common Good</em>.", "Foi construído e avaliado em Icaraí, Niterói (RJ), com contagens veiculares reais cedidas pela NITTRANS por um Termo de Cooperação Técnica, e submetido ao 32º <strong>Prêmio Jovem Cientista</strong> (CNPq), cujo tema foi <em>Inteligência Artificial para o Bem Comum</em>."],
+        ["The name comes from Akuanduba, a deity of the Arara people of Pará who played a flute to bring order back to the world. Seemed right for a traffic system.", "O nome vem de Akuanduba, divindade do povo Arara, do Pará, que tocava uma flauta para pôr ordem no mundo. Pareceu certo para um sistema de trânsito."]
+      ],
+      "botoes": [
+        {"rotulo": ["Source on GitHub", "Código no GitHub"], "url": "https://github.com/Kronohdev/Akuanduba"}
+      ],
+      "ficha": [
+        {"k": ["Type", "Tipo"], "v": ["Research project · digital twin", "Projeto de pesquisa · gêmeo digital"]},
+        {"k": ["Where", "Onde"], "v": "Icaraí, Niterói (RJ)"},
+        {"k": ["Period", "Período"], "v": ["April to July 2026", "Abril a julho de 2026"]},
+        {"k": ["Submitted to", "Submetido ao"], "v": ["32nd Prêmio Jovem Cientista (CNPq)", "32º Prêmio Jovem Cientista (CNPq)"]},
+        {"k": ["Stack", "Stack"], "v": "Python · PyTorch · PyTorch Geometric · Stable-Baselines3 · Gymnasium · OpenCV · OSMnx · FastAPI · Streamlit + PyDeck"},
+        {"k": ["Hardware", "Hardware"], "v": ["CPU only", "Só CPU"]},
+        {"k": ["Repository", "Repositório"], "v": "<a href='https://github.com/Kronohdev/Akuanduba'>Kronohdev/Akuanduba</a>"}
+      ],
+      "secoes": [
+        {"tipo": "pipeline", "titulo": ["How it works", "Como funciona"], "passos": [
+          {"t": ["Perception", "Percepção"], "d": ["Municipal cameras. MOG2 background subtraction plus filtered tracking give self-calibrated vehicle counts and speeds.", "Câmeras municipais. Subtração de fundo MOG2 com rastreio filtrado dá contagem e velocidade autocalibradas."]},
+          {"t": ["Forecast", "Previsão"], "d": ["The Oracle (STGT v3): GATv2 graph attention over the street network, a temporal Transformer, residual path and clock features, with continual learning.", "O Oráculo (STGT v3): atenção em grafo GATv2 sobre a malha viária, Transformer temporal, caminho residual e relógio, com aprendizado contínuo."]},
+          {"t": ["Control", "Controle"], "d": ["One PPO policy shared by 36 traffic lights, with a social vulnerability weight in the reward.", "Uma política PPO compartilhada por 36 semáforos, com peso de vulnerabilidade social na recompensa."]},
+          {"t": ["Emergency", "Emergência"], "d": ["A time-dependent router sends ambulances over the traffic fields the Oracle <em>predicts</em>.", "Um roteador tempo-dependente envia ambulâncias pelos campos de tráfego que o Oráculo <em>prevê</em>."]}
+        ], "nota": ["Around it: a FastAPI core that runs the twin's game loop, a 3D command center in Streamlit and PyDeck, and a 72-hour shadow pilot that runs live and validates itself.", "Em volta: um núcleo FastAPI que roda o game loop do gêmeo, um centro de comando 3D em Streamlit e PyDeck e um piloto sombra de 72 horas que opera ao vivo e se valida."]},
+        {"tipo": "tabela", "titulo": ["Main results", "Resultados principais"], "intro": ["As reported in the repository, each with its honest framing. Full protocols and limitations are in the paper.", "Como estão no repositório, cada um com o seu enquadramento honesto. Protocolos e limitações completos estão no artigo."], "colunas": [["Experiment", "Experimento"], ["Result", "Resultado"], ["Honest framing", "Enquadramento honesto"]], "linhas": [
+          [["Perception vs. official sensor 12 m away", "Percepção vs. sensor oficial a 12 m"], ["1.3% divergence in mean count", "1,3% de divergência na contagem média"], ["Spot audit: 1 corridor, 4 clips", "Auditoria pontual: 1 corredor, 4 clipes"]],
+          [["Forecaster, temporal validation on real data", "Previsor, validação temporal com dados reais"], ["MSE 1.88×10⁻³; beats persistence at every horizon from 15 to 60 min", "MSE 1,88×10⁻³; vence a persistência em todos os horizontes de 15 a 60 min"], ["Seasonal-naive wins beyond 45 min", "O sazonal-ingênuo vence além de 45 min"]],
+          [["PPO control vs. fixed plan", "Controle PPO vs. plano fixo"], ["Avoids the capacity-drop regime that saturates the baseline", "Evita o regime de queda de capacidade que satura o baseline"], ["Measured inside the twin", "Medido dentro do gêmeo digital"]],
+          [["Ambulance dispatch, 240 real scenarios", "Despacho de ambulâncias, 240 cenários reais"], ["−7.9% peak travel time (about 24 s per run, 95% CI [19; 30] s); 99.7% of the perfect-information ceiling", "−7,9% no tempo de pico (cerca de 24 s por corrida, IC95% [19; 30] s); 99,7% do teto de informação perfeita"], ["Global median is 0% (ties on free-flowing streets)", "Mediana global de 0% (empates em malha livre)"]],
+          [["Scalability", "Escalabilidade"], ["25,000-node network: one forecast in about 2 s of CPU", "Malha de 25 mil nós: uma previsão em cerca de 2 s de CPU"], ["Synthetic grid", "Grade sintética"]]
+        ]},
+        {"tipo": "figura", "titulo": ["Privacy by architecture", "Privacidade por arquitetura"], "paragrafos": [
+          ["Vision works on masses of moving pixels. There is no face recognition and no license plate reading, by design, in line with Brazil's LGPD.", "A visão trabalha com massas de pixels em movimento. Não há reconhecimento facial nem leitura de placas, por projeto, em conformidade com a LGPD."],
+          ["The public repository only holds code and artifacts derived from public sources: the OpenStreetMap street network and buildings, and the public metadata of the city's cameras. The NITTRANS counts, the answers of the 125-person mobility survey and the trained weights stay out of it.", "O repositório público só tem código e artefatos derivados de fontes públicas: a malha viária e os prédios do OpenStreetMap e os metadados públicos das câmeras da cidade. As contagens da NITTRANS, as respostas da pesquisa de mobilidade com 125 pessoas e os pesos treinados ficam de fora."],
+          ["Reproducible by construction: every paper figure has a CSV with the exact plotted series, seeds are fixed, validation splits are temporal, and imputed data is masked.", "Reprodutível por construção: cada figura do artigo tem um CSV com as séries exatas, as sementes são fixas, a validação é temporal e o dado imputado é mascarado."]
+        ], "arquivo": "icarai_3d.jpg", "legenda": ["Icaraí's 727 buildings, rendered from the OpenStreetMap footprints the twin uses. Taller buildings glow. Map data © OpenStreetMap contributors.", "Os 727 prédios de Icaraí, desenhados a partir dos contornos do OpenStreetMap que o gêmeo usa. Os mais altos brilham. Dados do mapa © colaboradores do OpenStreetMap."]}
+      ],
+      "agradecimentos": ["Thanks to the City of Niterói and NITTRANS for the real data and technical support, and to the 125 citizens who answered the mobility survey.", "Agradecimentos à Prefeitura de Niterói e à NITTRANS, pelos dados reais e pelo suporte técnico, e aos 125 cidadãos que responderam à pesquisa de mobilidade."],
+      "creditos": [
+        {"nome": "EU", "funcao": ["Research, design and development", "Pesquisa, projeto e desenvolvimento"]}
+      ]
+    },
+    {
+      "slug": "pesquisa",
+      "titulo": "Scientific research",
+      "titulo_pt": "Pesquisa científica",
+      "cor": "#4cc9f0",
+      "emblema": "assets/projetos/pesquisa/icarai_cameras.jpg",
+      "emblema_tipo": "foto",
+      "cartao": ["Computer vision research at Media Lab UFF with a CNPq grant: cameras as traffic sensors.", "Pesquisa em visão computacional no Media Lab UFF com bolsa CNPq: câmeras como sensores de trânsito."],
+      "tagline": ["Computer vision at Media Lab UFF: turning ordinary street cameras into traffic sensors.", "Visão computacional no Media Lab UFF: transformando câmeras de rua comuns em sensores de trânsito."],
+      "tags": ["Computer vision", "Media Lab UFF", "CNPq", "Urban mobility", "Traffic flow models"],
+      "sobre": [
+        ["I am a <strong>Computer Vision researcher at Media Lab UFF</strong>, at the Institute of Computing of Universidade Federal Fluminense, with a <strong>CNPq research grant</strong>.", "Sou <strong>pesquisador em Visão Computacional no Media Lab UFF</strong>, no Instituto de Computação da Universidade Federal Fluminense, com <strong>bolsa de pesquisa do CNPq</strong>."],
+        ["My work so far points computer vision at the city. Niterói already has a network of public traffic cameras; the question is how much a computer can learn from them. How many cars, how fast, how dense, and what that says about the next minutes on the streets around a hospital, a beach or a university.", "Até aqui, o meu trabalho aponta a visão computacional para a cidade. Niterói já tem uma rede de câmeras públicas de trânsito; a pergunta é quanto um computador consegue aprender com elas. Quantos carros, a que velocidade, com que densidade, e o que isso diz sobre os próximos minutos nas ruas em volta de um hospital, de uma praia ou de uma universidade."],
+        ["This page is a high-level overview. Data, results and drafts that are not public yet stay out of it.", "Esta página é uma visão geral. Dados, resultados e rascunhos que ainda não são públicos ficam de fora."]
+      ],
+      "botoes": [
+        {"rotulo": ["See Akuanduba OS", "Ver o Akuanduba OS"], "url": "akuanduba.html"}
+      ],
+      "ficha": [
+        {"k": ["Role", "Função"], "v": ["Computer Vision Researcher", "Pesquisador em Visão Computacional"]},
+        {"k": ["Lab", "Laboratório"], "v": ["Media Lab UFF · Institute of Computing", "Media Lab UFF · Instituto de Computação"]},
+        {"k": ["Funding", "Fomento"], "v": ["CNPq research grant", "Bolsa de pesquisa do CNPq"]},
+        {"k": ["Areas", "Áreas"], "v": ["Computer vision, machine learning, urban mobility", "Visão computacional, aprendizado de máquina, mobilidade urbana"]},
+        {"k": ["Tools", "Ferramentas"], "v": "Python · OpenCV · NetworkX · OSMnx · PyTorch"},
+        {"k": ["City", "Cidade"], "v": "Niterói (RJ)"}
+      ],
+      "secoes": [
+        {"tipo": "texto", "titulo": ["Phase 1: traffic as a fluid", "Fase 1: o trânsito como fluido"], "paragrafos": [
+          ["Games usually simulate traffic with one agent per car. That does not scale to a whole city in real time. The first prototype (March 2026) took the opposite road and treated traffic as a one-dimensional compressible fluid flowing through the street graph of Icaraí, with camera measurements feeding the density of each street.", "Jogos costumam simular trânsito com um agente por carro. Isso não escala para uma cidade inteira em tempo real. O primeiro protótipo (março de 2026) seguiu o caminho oposto e tratou o trânsito como um fluido compressível unidimensional correndo pelo grafo das ruas de Icaraí, com as medições das câmeras alimentando a densidade de cada rua."]
+        ], "formulas": [
+          {"f": "∂ρ/∂t + ∂q/∂x = 0", "d": ["continuity: cars are conserved", "continuidade: carro não some"]},
+          {"f": "q = ρ · v(ρ)", "d": ["LWR model (Lighthill-Whitham-Richards)", "modelo LWR (Lighthill-Whitham-Richards)"]},
+          {"f": "v(ρ) = v<sub>max</sub> (1 − ρ / ρ<sub>max</sub>)", "d": ["Greenshields speed-density law", "lei velocidade-densidade de Greenshields"]},
+          {"f": "Δt<sub>e</sub> = L<sub>e</sub> / v<sub>e</sub>(ρ)", "d": ["edge cost for Dijkstra and A*: a jammed street costs infinite time", "custo da aresta no Dijkstra e no A*: rua parada custa tempo infinito"]}
+        ]},
+        {"tipo": "figura", "titulo": ["Phase 2: from prototype to Akuanduba OS", "Fase 2: do protótipo ao Akuanduba OS"], "paragrafos": [
+          ["The fluid prototype grew into <a href='akuanduba.html'>Akuanduba OS</a>: a learned forecaster replaced the hand-written physics, a reinforcement learning policy took over the traffic lights, and the ambulance router started planning on predicted traffic.", "O protótipo de fluido cresceu e virou o <a href='akuanduba.html'>Akuanduba OS</a>: um previsor aprendido substituiu a física escrita à mão, uma política de aprendizado por reforço assumiu os semáforos e o roteador de ambulâncias passou a planejar sobre o trânsito previsto."],
+          ["One rule stayed from day one: the vision side measures traffic, not people. It works on moving pixels, with no face recognition and no plate reading.", "Uma regra ficou desde o primeiro dia: a visão mede trânsito, não pessoas. Ela trabalha com pixels em movimento, sem reconhecimento facial e sem leitura de placas."]
+        ], "arquivo": "icarai_cameras.jpg", "legenda": ["Icaraí building footprints (OpenStreetMap) and the locations of public municipal traffic cameras, in pink. Map data © OpenStreetMap contributors.", "Contornos dos prédios de Icaraí (OpenStreetMap) e a posição das câmeras públicas de trânsito da prefeitura, em rosa. Dados do mapa © colaboradores do OpenStreetMap."]}
+      ],
+      "creditos": [
+        {"nome": "EU", "funcao": ["Researcher, Media Lab UFF", "Pesquisador, Media Lab UFF"]}
+      ]
+    },
+    {
+      "slug": "dnd-builder",
+      "titulo": "Grimório do Mestre",
+      "cor": "#e0b23c",
+      "emblema": "assets/projetos/dnd-builder/icone.png",
+      "emblema_tipo": "logo",
+      "cartao": ["D&D Builder: a desktop companion for running D&D 5E, with maps, bestiary, combat and a Telegram crow.", "D&D Builder: um app de mesa para mestrar D&D 5E, com mapas, bestiário, combate e um corvo no Telegram."],
+      "tagline": ["D&D Builder: the desktop table companion I built to run my Dungeons &amp; Dragons 5E campaign.", "D&D Builder: o app de mesa que eu fiz para mestrar a minha campanha de Dungeons &amp; Dragons 5E."],
+      "tags": ["Electron", "React", "Vite", "D&D 5E", "Telegram bot", "Desktop app"],
+      "sobre": [
+        ["<strong>Grimório do Mestre</strong> (the repository is called D&amp;D Builder) is a desktop app that sits next to me when I am the Dungeon Master. It was made for one campaign, <em>Baldur's Gate: Descent into Avernus</em>, played in Portuguese, and it puts everything I need at the table in one place: the book, the maps, the monsters, the fight, the loot and a way to pass notes to the players.", "O <strong>Grimório do Mestre</strong> (o repositório se chama D&amp;D Builder) é um app de desktop que fica do meu lado quando eu sou o mestre. Ele foi feito para uma campanha, <em>Descida ao Averno</em> (Baldur's Gate: Descent into Avernus), jogada em português, e junta tudo o que eu preciso na mesa: o livro, os mapas, os monstros, a luta, o tesouro e um jeito de passar bilhetes para os jogadores."],
+        ["It looks like a D&amp;D book: parchment, leather and gold, with medieval fonts and three themes (Parchment, Infernal Tome and Night Watch). The interface and all the data are in Brazilian Portuguese, and it ships as a Windows installer.", "Ele tem cara de livro de D&amp;D: pergaminho, couro e dourado, com fontes medievais e três temas (Pergaminho, Tomo Infernal e Vigília Noturna). A interface e todos os dados estão em português, e ele sai como instalador para Windows."],
+        ["It is a personal tool and the repository stays private, because it works on top of copyrighted D&amp;D books that are not mine to share.", "É uma ferramenta pessoal e o repositório fica privado, porque ela trabalha em cima de livros de D&amp;D protegidos por direitos autorais, que não são meus para compartilhar."]
+      ],
+      "botoes": [],
+      "ficha": [
+        {"k": ["Type", "Tipo"], "v": ["Desktop app for game masters", "App de desktop para mestres"]},
+        {"k": ["Platform", "Plataforma"], "v": ["Windows (NSIS installer)", "Windows (instalador NSIS)"]},
+        {"k": ["Stack", "Stack"], "v": "Electron 33 · React 18 · Vite 6 · CSS · Python + PyMuPDF"},
+        {"k": ["System", "Sistema"], "v": "Dungeons &amp; Dragons 5E"},
+        {"k": ["Language", "Idioma"], "v": ["Portuguese (Brazil)", "Português (Brasil)"]},
+        {"k": ["Period", "Período"], "v": ["August to September 2026", "Agosto a setembro de 2026"]},
+        {"k": ["Status", "Status"], "v": ["Personal tool, private repository", "Ferramenta pessoal, repositório privado"]}
+      ],
+      "secoes": [
+        {"tipo": "numeros", "itens": [
+          {"valor": "143", "rotulo": ["maps with grid, markers and notes", "mapas com grade, marcadores e notas"]},
+          {"valor": "441", "rotulo": ["searchable spells", "magias pesquisáveis"]},
+          {"valor": "16", "rotulo": ["5E conditions in the combat tracker", "condições de 5E no rastreador de combate"]},
+          {"valor": "12", "rotulo": ["ready-made handouts", "documentos prontos para entregar"]}
+        ]},
+        {"tipo": "cartoes", "titulo": ["What's inside", "O que tem dentro"], "itens": [
+          {"t": ["Campaign", "Campanha"], "d": ["Tabs per chapter: the book with search, a scene-by-scene script, rollable tables, loot, item forge, documents, guide and session notes.", "Abas por capítulo: o livro com busca, roteiro cena a cena, tabelas roláveis, tesouro, forja de itens, documentos, guia e notas de sessão."]},
+          {"t": ["Maps", "Mapas"], "d": ["Pan and zoom centered on the cursor, configurable grid, numbered markers with a legend, freehand drawing, ruler and notes per map.", "Pan e zoom centrado no cursor, grade configurável, marcadores numerados com legenda, desenho livre, régua e notas por mapa."]},
+          {"t": ["Bestiary", "Bestiário"], "d": ["Search, filter by creature type, random pick, tokens and a button that drops the monster straight into combat.", "Busca, filtro por tipo de criatura, sorteio, tokens e um botão que joga o monstro direto no combate."]},
+          {"t": ["Combat", "Combate"], "d": ["Initiative tracker that rolls d20 + Dex for NPCs, HP bars with quick damage and healing, conditions, rounds and turns.", "Rastreador de iniciativa que rola d20 + Des para os NPCs, barras de PV com dano e cura rápidos, condições, rodadas e turnos."]},
+          {"t": ["Spells and sheets", "Magias e fichas"], "d": ["Spell search by level, school and class. Full character sheets that export to and import from the official fillable 5E PDF.", "Busca de magias por nível, escola e classe. Fichas completas que exportam e importam a ficha oficial preenchível de 5E em PDF."]},
+          {"t": ["The crow (Telegram)", "O corvo (Telegram)"], "d": ["A Telegram bot with zero dependencies, running inside the app, sends monster cards, maps, book pages and handouts to the players' phones.", "Um bot do Telegram sem nenhuma dependência, rodando dentro do app, manda cartas de monstro, mapas, páginas do livro e documentos para o celular dos jogadores."]},
+          {"t": ["Scrolls and item forge", "Pergaminhos e forja"], "d": ["A canvas scroll generator with burnt edges and wax seals, plus a magic item creator that follows the Dungeon Master's Guide rules.", "Um gerador de pergaminhos em canvas, com bordas queimadas e selo de cera, e um criador de itens mágicos que segue as regras do Guia do Mestre."]},
+          {"t": ["Party XP and the DM's table", "XP da party e Mesa do Mestre"], "d": ["Shared XP with an encounter difficulty calculator, and a Miro-style flowchart of the whole campaign with draggable boxes and arrows.", "XP compartilhado com calculadora de dificuldade de encontro, e um fluxograma estilo Miro da campanha inteira, com caixas e setas arrastáveis."]}
+        ]},
+        {"tipo": "texto", "titulo": ["Under the hood", "Por baixo do capô"], "paragrafos": [
+          ["Electron in the main process, React and Vite in the renderer, and a hand-written CSS theme with no UI library. Data lives in JSON files; there is no HTTP server. Images reach the interface through a custom <code>library://</code> protocol that streams files and blocks path traversal, and the renderer only talks to the main process through a preload bridge (<code>contextIsolation</code> on, <code>nodeIntegration</code> off).", "Electron no processo principal, React e Vite no renderer e um tema em CSS escrito à mão, sem biblioteca de UI. Os dados ficam em arquivos JSON; não há servidor HTTP. As imagens chegam na interface por um protocolo próprio, <code>library://</code>, que serve os arquivos por stream e bloqueia path traversal, e o renderer só fala com o processo principal por uma ponte de preload (<code>contextIsolation</code> ligado, <code>nodeIntegration</code> desligado)."],
+          ["Python scripts with PyMuPDF and the Windows OCR engine turn PDF pages into structured text: columns, headings, read-aloud boxes, stat blocks and treasure. electron-builder packs it all into an installer, with the heavy library kept in a folder you can point the app to.", "Scripts em Python com PyMuPDF e o OCR do Windows transformam páginas de PDF em texto estruturado: colunas, títulos, caixas de leitura em voz alta, blocos de estatística e tesouros. O electron-builder empacota tudo num instalador, com a biblioteca pesada numa pasta que você aponta pelo app."]
+        ]},
+        {"tipo": "texto", "titulo": ["Before it: Dark Blood VTT", "Antes dele: Dark Blood VTT"], "paragrafos": [
+          ["The Grimório has an older sibling. In 2025 I built <a href='https://github.com/Kronohdev/DarkBlood-TTRPG'>Dark Blood VTT</a>, an Electron character sheet and virtual tabletop for <em>Dark Blood</em>, a dark tabletop RPG system: character wizard with point-buy attributes, classes like Brutalista, Especialista and Erudito, level-up, inventory, grimoire, dice, death saves, a DM tracker and eight color themes. Different game, no shared code, same idea: the table works better when the boring parts are automatic.", "O Grimório tem um irmão mais velho. Em 2025 eu fiz o <a href='https://github.com/Kronohdev/DarkBlood-TTRPG'>Dark Blood VTT</a>, uma ficha interativa e mesa virtual em Electron para <em>Dark Blood</em>, um sistema de RPG de mesa sombrio: criação de personagem com compra de pontos, classes como Brutalista, Especialista e Erudito, subida de nível, inventário, grimório, dados, testes contra a morte, um painel do mestre e oito temas de cor. Outro jogo, nenhum código em comum, a mesma ideia: a mesa funciona melhor quando a parte chata é automática."]
+        ]}
+      ],
+      "creditos": [
+        {"nome": "EU", "funcao": ["Design and development", "Design e desenvolvimento"]}
+      ]
+    },
+    {
+      "slug": "athena-nba",
+      "titulo": "Project Athena",
+      "cor": "#f58a2e",
+      "emblema": "assets/projetos/athena-nba/quadra.svg",
+      "emblema_tipo": "logo",
+      "cartao": ["NBA AI Engine: predicts the winner and the point spread with a deep residual network. 71.2% accuracy.", "NBA AI Engine: prevê o vencedor e o saldo de pontos com uma rede residual profunda. 71,2% de acerto."],
+      "tagline": ["NBA AI Engine: game outcome prediction and tactical analysis with deep residual networks and multidimensional profiles.", "NBA AI Engine: previsão de resultados e análise tática com redes residuais profundas e perfis multidimensionais."],
+      "tags": ["PyTorch", "Deep learning", "Sports analytics", "NBA", "Multi-task", "Paper"],
+      "sobre": [
+        ["<strong>Project Athena</strong> predicts NBA games before tip-off: who wins, and by how many points. It learns from 10,412 real games and describes each team by how it actually plays right now, not by its name.", "O <strong>Project Athena</strong> prevê jogos da NBA antes do apito inicial: quem ganha e por quantos pontos. Ele aprende com 10.412 jogos reais e descreve cada time pelo jeito que ele joga agora, e não pelo nome."],
+        ["The work became the paper <em>“NBA AI Engine: Previsão de Resultados e Análise Tática via Redes Residuais Profundas e Perfis Multidimensionais”</em>, written for the course Tópicos em Engenharia de Software I at the Institute of Computing of UFF (Niterói, 2026).", "O trabalho virou o artigo <em>“NBA AI Engine: Previsão de Resultados e Análise Tática via Redes Residuais Profundas e Perfis Multidimensionais”</em>, escrito para a disciplina Tópicos em Engenharia de Software I, no Instituto de Computação da UFF (Niterói, 2026)."],
+        ["The test is strict on purpose: the model trains on seasons 2014 to 2022 and is judged blind on 2023 and 2024. No random split, so no information from the future leaks into training.", "O teste é rigoroso de propósito: o modelo treina nas temporadas de 2014 a 2022 e é avaliado às cegas em 2023 e 2024. Sem divisão aleatória, então nenhuma informação do futuro vaza para o treino."]
+      ],
+      "botoes": [],
+      "ficha": [
+        {"k": ["Type", "Tipo"], "v": ["Academic paper + code", "Artigo acadêmico + código"]},
+        {"k": ["Course", "Disciplina"], "v": "Tópicos em Engenharia de Software I"},
+        {"k": ["Where", "Onde"], "v": ["Institute of Computing, UFF · Niterói, 2026", "Instituto de Computação da UFF · Niterói, 2026"]},
+        {"k": ["Data", "Dados"], "v": ["10,412 games · 13 million play-by-play records", "10.412 jogos · 13 milhões de registros de jogada a jogada"]},
+        {"k": ["Split", "Divisão"], "v": ["Train 2014 to 2022 · blind test 2023 and 2024", "Treino 2014 a 2022 · teste cego 2023 e 2024"]},
+        {"k": ["Stack", "Stack"], "v": "Python · PyTorch · pandas · scikit-learn · SQLite · nba_api"},
+        {"k": ["Repository", "Repositório"], "v": ["Private", "Privado"]}
+      ],
+      "secoes": [
+        {"tipo": "numeros", "itens": [
+          {"valor": "71.2%", "valor_pt": "71,2%", "rotulo": ["winner accuracy on the blind test", "acerto do vencedor no teste cego"]},
+          {"valor": "10.84", "valor_pt": "10,84", "rotulo": ["points of mean absolute error on the spread", "pontos de erro absoluto médio no saldo"]},
+          {"valor": "10,412", "valor_pt": "10.412", "rotulo": ["real games", "jogos reais"]},
+          {"valor": "48", "rotulo": ["dimensions in each team's identity vector", "dimensões no vetor de identidade de cada time"]}
+        ]},
+        {"tipo": "barras", "titulo": ["Winner accuracy", "Acerto do vencedor"], "intro": ["Share of games where the predicted winner was right, on a 0 to 100% scale.", "Fração de jogos em que o vencedor previsto acertou, numa escala de 0 a 100%."], "itens": [
+          {"rotulo": ["Always pick the home team", "Sempre apostar no mandante"], "valor": 59, "texto": ["59%", "59%"]},
+          {"rotulo": ["Vegas and analysts (ceiling)", "Vegas e analistas (teto)"], "valor": 68.5, "texto": ["68.5%", "68,5%"]},
+          {"rotulo": ["Project Athena", "Project Athena"], "valor": 71.2, "texto": ["71.2%", "71,2%"], "destaque": true}
+        ], "nota": ["The two reference lines are approximate values, as reported in the paper.", "As duas referências são valores aproximados, como reportados no artigo."]},
+        {"tipo": "pipeline", "titulo": ["The pipeline", "O pipeline"], "passos": [
+          {"t": ["Hybrid data", "Dados híbridos"], "d": ["A “cold” SQLite base with 13 million play-by-play records builds each team's historical spatial profile; “hot” daily box scores keep it current.", "Uma base “fria” em SQLite com 13 milhões de registros jogada a jogada monta o perfil espacial histórico; box scores diários “quentes” mantêm tudo atual."]},
+          {"t": ["Features", "Atributos"], "d": ["Per 100 possessions, garbage time filtered out: TS%, AST/TO with Laplace smoothing, frequency and FG% in four shot zones, all Z-scored. Plus a modified Elo computed only from previous games.", "Por 100 posses, sem garbage time: TS%, AST/TO com suavização de Laplace, frequência e FG% em quatro zonas de arremesso, tudo em Z-score. E um Elo modificado calculado só com jogos anteriores."]},
+          {"t": ["Rotational 8", "Rotational 8"], "d": ["The 8 players with the most minutes in the last 30 days, averaged by recent minutes into a 48-dimension team identity. Injuries and load management change the vector.", "Os 8 jogadores com mais minutos nos últimos 30 dias, em média ponderada pelos minutos recentes, viram uma identidade de time com 48 dimensões. Lesão e gestão de carga mudam o vetor."]},
+          {"t": ["Deep ResNet", "ResNet profunda"], "d": ["A residual network for tabular data written from scratch in PyTorch: skip connections, GELU and LayerNorm.", "Uma rede residual para dados tabulares escrita do zero em PyTorch: conexões residuais, GELU e LayerNorm."]},
+          {"t": ["Two answers", "Duas respostas"], "d": ["Multi-task heads: win probability (sigmoid) and point spread (regression), trained with Huber loss.", "Cabeças multitarefa: probabilidade de vitória (sigmoide) e saldo de pontos (regressão), treinadas com Huber loss."]}
+        ]},
+        {"tipo": "figura", "titulo": ["What the model learned", "O que o modelo aprendeu"], "paragrafos": [
+          ["Efficiency beats volume. In the interpretability analysis, the TS% Z-score carried more than twice the activation weight of raw three-point attempt frequency. AST/TO came second: teams that share the ball without giving it away win.", "Eficiência vence volume. Na análise de interpretabilidade, o Z-score de TS% teve mais que o dobro do peso de ativação da frequência bruta de tentativas de três. AST/TO veio em segundo: time que divide a bola sem perder a bola ganha."],
+          ["Blowouts are noise. In the ablation, swapping Huber loss for MSE made the spread much worse: 30-point games pulled the regression around. Huber keeps them from dominating.", "Lavada é ruído. Na ablação, trocar a Huber loss por MSE piorou muito o saldo: jogos de 30 pontos de diferença puxavam a regressão. A Huber impede que eles dominem."],
+          ["Next: player props and a bidirectional Player Elo.", "Próximos passos: player props e um Player Elo bidirecional."]
+        ], "arquivo": "quadra.svg", "legenda": ["The four shot zones used as features: restricted area, non-restricted paint, mid-range and three-point, each with frequency and FG%.", "As quatro zonas de arremesso usadas como atributos: área restrita, garrafão fora da área restrita, meia distância e três pontos, cada uma com frequência e FG%."]}
+      ],
+      "creditos": [
+        {"nome": "EU", "funcao": ["Main author (Kauã Neves Jesus de Paula)", "Autor principal (Kauã Neves Jesus de Paula)"]},
+        {"nome": "Heitor Campos Cardoso de Mendonça", "funcao": ["Co-author", "Coautor"]},
+        {"nome": "Heitor Gomes Araújo", "funcao": ["Co-author", "Coautor"]}
+      ]
+    }
+  ]
+}
