@@ -294,7 +294,7 @@
       "url_itch": "",
       "url_jogar": "",
       "como_jogar": "Sem build pública encontrada; repositório privado (Kronohdev/unsworn).",
-      "tagline": "UNSWORN — investigacao e tatica em Irkalla.",
+      "tagline": "Investigation and tactics in Irkalla.",
       "generos": [
         "Tático por turnos",
         "Investigação"
@@ -304,7 +304,7 @@
       "engine": "Godot 4.6 (.NET / C#) · Forward+ · D3D12 · Jolt Physics",
       "idiomas": [
         "Português",
-        "Inglês (localização PT/EN segundo o ROADMAP e data/README)"
+        "Inglês"
       ],
       "status": "Em desenvolvimento (ROADMAP em fases; repo criado em 2026-09-09, último push em 2026-10-22)",
       "equipe": {
@@ -316,8 +316,8 @@
       "url_evento": "",
       "data_publicacao": "",
       "data_atualizacao": "2026-10-22 (último push no repositório)",
-      "descricao_pt": "Jogo tático por turnos com investigação, ambientado em Irkalla; projeto de extensão universitária feito em Godot 4.6 com C#. Segundo o ROADMAP e o data/README do repositório: o jogador controla um Necromante; o combate em tabuleiro usa uma 'Fita' de turnos por agilidade, habilidades de Conjurar (Levantar cadáveres como unidades, Devorar, Apressar/Reter, Nome), uma economia de 'Vestígio' e um sistema de seis elementos em três pares opostos (Osso/Carne, Memória/Esquecimento, Nome/Silêncio). A investigação dura uma semana de 7 dias, com suspeitos, interrogatórios, fragmentos de testemunho, cadáveres na Mesa de Autópsia e uma acusação no dia 7. O núcleo de simulação é C# puro, testado com xUnit, e o conteúdo entra por Resources .tres.",
-      "descricao_en": "A turn-based tactics game with investigation, set in Irkalla; a university extension project built in Godot 4.6 with C#. Per the repo's ROADMAP and data/README: you play a Necromancer; board combat uses an agility-based turn 'Tape' (Fita), Conjure abilities (raise corpses as units, Devour, Hasten/Hold, Name), a 'Vestige' economy and six elements in three opposing pairs (Bone/Flesh, Memory/Oblivion, Name/Silence). The investigation spans a 7-day week with suspects, interrogations, testimony fragments, corpses on the Autopsy Table and an accusation on day 7. The simulation core is pure C#, tested with xUnit, and content is authored as .tres Resources. (Tradução/resumo do texto do repositório, em português.)",
+      "descricao_pt": "Você é um Necromante em Irkalla e tem sete dias para resolver um caso. De dia você investiga: recebe visitas, interroga suspeitos, prende fragmentos de testemunho no Quadro de Contradições e examina cadáveres na Mesa de Autópsia antes que apodreçam. À noite vêm as hordas, e você responde com os mortos. O combate é por turnos num tabuleiro pequeno, com a ordem definida pela agilidade na Fita. Quem cai pode ser levantado como unidade sua, devorado para recuperar Vestígio ou usado para apressar e atrasar turnos. Seis elementos em três pares opostos (Osso e Carne, Memória e Esquecimento, Nome e Silêncio) decidem quem é fraco a quê, e os levantados aprendem o elemento oposto usando o próprio. Cada horda vencida rende perguntas para o próximo interrogatório. No dia 7, você faz a acusação. UNSWORN é um projeto de extensão universitária feito em Godot 4.6 com C#.",
+      "descricao_en": "You play a Necromancer in Irkalla, and you have seven days to solve a case. By day you investigate: you receive visitors, interrogate suspects, pin testimony fragments to the Contradiction Board and examine corpses on the Autopsy Table before they rot. At night the hordes come, and you fight back with the dead. Combat is turn-based on a small board, with turn order set by agility on the Tape. Fallen bodies can be raised as your own units, devoured to recover Vestige, or used to speed up and delay turns. Six elements in three opposing pairs (Bone and Flesh, Memory and Oblivion, Name and Silence) decide who is weak to what, and raised units learn their opposite element by using it. Every horde you win earns questions for the next interrogation. On day 7, you make your accusation. UNSWORN is a university extension project made in Godot 4.6 with C#.",
       "imagens": [
         {
           "arquivo": "assets/jogos/unsworn/necromante_conceito.png",
