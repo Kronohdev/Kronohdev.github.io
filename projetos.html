@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects · NEFERO</title>
+<meta name="description" content="Kauã Neves (Neferoo): small, strange games with big atmosphere. Lead director at HFTS Productions.">
+<meta property="og:title" content="NEFERO · Kauã Neves">
+<meta property="og:description" content="Small, strange games with big atmosphere.">
+<meta property="og:image" content="assets/banner.png">
+<link rel="icon" href="assets/avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en">
+
+<header class="topo">
+  <img class="banner pixel" src="assets/banner.gif" alt="NEFERO">
+  <nav>
+    <a href="index.html"><span class="en">Home</span><span class="pt">Início</span></a>
+    <a href="jogos.html"><span class="en">Games</span><span class="pt">Jogos</span></a>
+    <a href="projetos.html" class="atual" aria-current="page"><span class="en">Projects</span><span class="pt">Projetos</span></a>
+    <a href="pesquisa.html"><span class="en">Research</span><span class="pt">Pesquisa</span></a>
+    <a href="codigo.html"><span class="en">Code</span><span class="pt">Código</span></a>
+    <a href="index.html#contact"><span class="en">Find me</span><span class="pt">Contato</span></a>
+    <button id="idioma" type="button" aria-label="Switch language">PT</button>
+  </nav>
+</header>
+
+<main>
+  <section id="projects">
+    <h2 class="titulo"><span class="en">Projects</span><span class="pt">Projetos</span></h2>
+    <p class="en projetos-intro">Not everything is a game. Research, tools and engines, mostly from UFF.</p>
+    <p class="pt projetos-intro">Nem tudo é jogo. Pesquisa, ferramentas e engines, quase tudo da UFF.</p>
+    <div class="grade projetos">
+      <a class="cartao projeto" href="power-pplay.html" style="--destaque:#ff3ec8">
+        <div class="miolo logo"><img src="assets/projetos/power-pplay/logo.png" alt="Power PPlay"></div>
+        <h3>Power PPlay</h3>
+        <p class="en">The Python game framework taught at UFF, rebuilt: versions 2.0 and 2.1, with its own IDE.</p>
+        <p class="pt">A framework de jogos em Python ensinada na UFF, reconstruída: versões 2.0 e 2.1, com IDE própria.</p>
+        <div class="meta"><span><i></i>Python · Pygame-CE</span></div>
+      </a>
+      <a class="cartao projeto" href="akuanduba.html" style="--destaque:#39d98a">
+        <div class="miolo foto"><img src="assets/projetos/akuanduba/icarai_3d.jpg" alt="Akuanduba OS"></div>
+        <h3>Akuanduba OS</h3>
+        <p class="en">A digital twin of Niterói's traffic: cameras, graph forecasting, RL traffic lights and ambulance routing.</p>
+        <p class="pt">Um gêmeo digital do trânsito de Niterói: câmeras, previsão em grafo, semáforos por RL e rotas de ambulância.</p>
+        <div class="meta"><span><i></i>PyTorch · RL · OpenCV</span></div>
+      </a>
+      <a class="cartao projeto" href="pesquisa.html" style="--destaque:#4cc9f0">
+        <div class="miolo foto"><img src="assets/projetos/pesquisa/icarai_cameras.jpg" alt="Scientific research"></div>
+        <h3><span class="en">Scientific research</span><span class="pt">Pesquisa científica</span></h3>
+        <p class="en">Computer vision research at Media Lab UFF with a CNPq grant: street cameras as traffic sensors.</p>
+        <p class="pt">Pesquisa em visão computacional no Media Lab UFF com bolsa CNPq: câmeras de rua como sensores de trânsito.</p>
+        <div class="meta"><span><i></i>Media Lab UFF · CNPq</span></div>
+      </a>
+      <a class="cartao projeto" href="athena-nba.html" style="--destaque:#f58a2e">
+        <div class="miolo logo"><img src="assets/projetos/athena-nba/quadra.svg" alt="Project Athena"></div>
+        <h3>Project Athena</h3>
+        <p class="en">NBA AI Engine: predicts the winner and the point spread with a deep residual network. 71.2% accuracy.</p>
+        <p class="pt">NBA AI Engine: prevê o vencedor e o saldo de pontos com uma rede residual profunda. 71,2% de acerto.</p>
+        <div class="meta"><span><i></i>PyTorch · Paper</span></div>
+      </a>
+      <a class="cartao projeto" href="dnd-builder.html" style="--destaque:#e0b23c">
+        <div class="miolo logo"><img src="assets/projetos/dnd-builder/icone.png" alt="Grimório do Mestre"></div>
+        <h3>Grimório do Mestre</h3>
+        <p class="en">D&amp;D Builder: a desktop companion for running D&amp;D 5E, with maps, bestiary, combat and a Telegram crow.</p>
+        <p class="pt">D&amp;D Builder: um app de mesa para mestrar D&amp;D 5E, com mapas, bestiário, combate e um corvo no Telegram.</p>
+        <div class="meta"><span><i></i>Electron · React</span></div>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img src="assets/bando.gif" alt="" class="faixa pixel">
+  <p><em class="en">Thanks for stopping by. The crow is watching.</em><em class="pt">Valeu pela visita. O corvo tá de olho.</em></p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

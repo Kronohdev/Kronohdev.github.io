@@ -18,14 +18,12 @@
 <header class="topo">
   <img class="banner pixel" src="assets/banner.gif" alt="NEFERO">
   <nav>
-    <a href="#about"><span class="en">About</span><span class="pt">Sobre</span></a>
-    <a href="#outside">UFF</a>
-    <a href="#games"><span class="en">Games</span><span class="pt">Jogos</span></a>
-    <a href="#quorum">Quórum</a>
-    <a href="#projects"><span class="en">Projects</span><span class="pt">Projetos</span></a>
-    <a href="#repos"><span class="en">Repos</span><span class="pt">Repositórios</span></a>
-    <a href="#commits">Commits</a>
-    <a href="#contact"><span class="en">Find me</span><span class="pt">Contato</span></a>
+    <a href="index.html" class="atual" aria-current="page"><span class="en">Home</span><span class="pt">Início</span></a>
+    <a href="jogos.html"><span class="en">Games</span><span class="pt">Jogos</span></a>
+    <a href="projetos.html"><span class="en">Projects</span><span class="pt">Projetos</span></a>
+    <a href="pesquisa.html"><span class="en">Research</span><span class="pt">Pesquisa</span></a>
+    <a href="codigo.html"><span class="en">Code</span><span class="pt">Código</span></a>
+    <a href="index.html#contact"><span class="en">Find me</span><span class="pt">Contato</span></a>
     <button id="idioma" type="button" aria-label="Switch language">PT</button>
   </nav>
 </header>
@@ -34,11 +32,11 @@
   <section class="hero">
     <img src="assets/hero.gif" alt="NEFERO" class="pixel">
     <p class="assinatura"><em>Kauã Neves</em> · game developer ·
+      <span class="en">scientific researcher</span><span class="pt">pesquisador científico</span> ·
       <span class="en">lead director at</span><span class="pt">diretor principal da</span>
       <a href="https://www.instagram.com/hfts_ofc/">HFTS Productions</a></p>
     <img src="assets/olhos.gif" alt="" class="faixa pixel">
   </section>
-
   <section id="about" class="placa sobre">
     <img src="assets/corvo.gif" alt="NEFERO crow" class="pixel corvo">
     <div>
@@ -59,9 +57,13 @@
       </ul>
     </div>
   </section>
-
+  <section class="atalhos">
+    <a class="atalho" href="jogos.html"><b><span class="en">Games</span><span class="pt">Jogos</span></b><span class="en">Saideira, Coiote's Dawn, O Plano, UNSWORN and Quórum</span><span class="pt">Saideira, Coiote's Dawn, O Plano, UNSWORN e Quórum</span></a>
+    <a class="atalho" href="projetos.html"><b><span class="en">Projects</span><span class="pt">Projetos</span></b><span class="en">Power PPlay, Akuanduba OS, Project Athena, Grimório</span><span class="pt">Power PPlay, Akuanduba OS, Project Athena, Grimório</span></a>
+    <a class="atalho" href="pesquisa.html"><b><span class="en">Research</span><span class="pt">Pesquisa</span></b><span class="en">Computer vision at Media Lab UFF · CNPq</span><span class="pt">Visão computacional no Media Lab UFF · CNPq</span></a>
+    <a class="atalho" href="codigo.html"><b><span class="en">Code</span><span class="pt">Código</span></b><span class="en">Public repos and commit graph</span><span class="pt">Repos públicos e gráfico de commits</span></a>
+  </section>
   <img src="assets/divisoria.gif" alt="" class="faixa pixel">
-
   <section id="studio" class="placa">
     <h2>HFTS Productions</h2>
     <p class="en">I'm one of the creators of <strong>HFTS Productions</strong>, a Brazilian indie studio, and the <strong>lead director</strong> of our projects. I wear all the hats: game design, writing and direction, art and programming. Small team, big ideas, questionable sleep schedule.</p>
@@ -69,51 +71,18 @@
     <p class="pt">Sou um dos criadores da <strong>HFTS Productions</strong>, estúdio indie brasileiro, e o <strong>diretor principal</strong> dos nossos projetos. Faço de tudo um pouco: game design, roteiro e direção, arte e programação. Equipe pequena, ideia grande, sono duvidoso.</p>
     <p class="pt jams">Jams: <b>GameJamPlus 26/27</b> (Saideira) · <b>DJUFF GameJam 2026</b> (Coiote's Dawn) · <b>Game Jam DJUFF 2025</b> (O Plano)</p>
   </section>
-
   <section id="outside" class="placa">
     <h2><span class="en">Outside the games</span><span class="pt">Fora dos jogos</span></h2>
     <p class="en">I study <strong>Computer Science at UFF</strong> (Universidade Federal Fluminense) in Niterói, Rio de Janeiro. When I'm not making games, I work with data and AI.</p>
     <p class="pt">Estudo <strong>Ciência da Computação na UFF</strong> (Universidade Federal Fluminense), em Niterói (RJ). Quando não tô fazendo jogo, tô mexendo com dados e IA.</p>
     <ul class="trilha">
       <li><b>Arpex</b><span class="en">AI &amp; Data Engineering Intern</span><span class="pt">Estagiário de IA e Engenharia de Dados</span></li>
-      <li><b>Media Lab UFF</b><span class="en">Computer Vision Researcher · CNPq research grant</span><span class="pt">Pesquisador em Visão Computacional · bolsa CNPq</span></li>
+      <li><a href="pesquisa.html"><b>Media Lab UFF</b><span class="en">Computer Vision Researcher · CNPq research grant</span><span class="pt">Pesquisador em Visão Computacional · bolsa CNPq</span></a></li>
       <li><b>DACC-UFF</b><span class="en">Director at the Computer Science student union</span><span class="pt">Diretor do Diretório Acadêmico de Ciência da Computação</span></li>
     </ul>
     <p class="ferramentas">Python · SQL · GCP · Machine Learning · LLMs · Computer Vision · Godot · Unity</p>
   </section>
-
-  <section id="games">
-    <h2 class="titulo"><span class="en">Games</span><span class="pt">Jogos</span></h2>
-    <div class="grade jogos-capas">
-      <a class="cartao capa" href="saideira.html">
-        <img src="assets/jogos/saideira/capa.jpg" alt="Saideira">
-        <h3>Saideira</h3>
-        <p class="en">Psychological horror truco against a man in a hat who cheats. So do you. GameJamPlus 26/27.</p>
-        <p class="pt">Truco de terror psicológico contra um homem de chapéu que rouba. Você também. GameJamPlus 26/27.</p>
-      </a>
-      <a class="cartao capa" href="coiotes-dawn.html">
-        <img src="assets/jogos/coiotes-dawn/capa.jpg" alt="Coiote's Dawn">
-        <h3>Coiote's Dawn</h3>
-        <p class="en">A survivor-like where you are a coyote. 887k builds, cursed items, 3 bosses. DJUFF GameJam 2026.</p>
-        <p class="pt">Survivor-like em que você é um coiote. 887 mil builds, itens amaldiçoados, 3 bosses. DJUFF GameJam 2026.</p>
-      </a>
-      <a class="cartao capa" href="o-plano.html">
-        <img src="assets/jogos/o-plano/capa.jpg" alt="O Plano">
-        <h3>O Plano</h3>
-        <p class="en">Journalists under a dictatorship hide the truth inside the propaganda. Point &amp; click, in the browser.</p>
-        <p class="pt">Jornalistas sob uma ditadura escondem a verdade dentro da propaganda. Point &amp; click no navegador.</p>
-      </a>
-      <a class="cartao capa" href="unsworn.html">
-        <img src="assets/jogos/unsworn/necromante_conceito.png" alt="UNSWORN">
-        <h3>UNSWORN</h3>
-        <p class="en">Turn-based tactics and investigation in Irkalla. A necromancer, seven days, one accusation. In development.</p>
-        <p class="pt">Tática por turnos e investigação em Irkalla. Um necromante, sete dias, uma acusação. Em desenvolvimento.</p>
-      </a>
-    </div>
-  </section>
-
   <img src="assets/divisoria.gif" alt="" class="faixa pixel">
-
   <section id="quorum" class="quorum-destaque">
     <a href="quorum.html"><img src="assets/jogos/quorum/key_art.jpg" alt="Quórum: Do bairro ao Planalto"></a>
     <div class="placa">
@@ -123,66 +92,6 @@
       <a class="botao" href="quorum.html"><span class="en">See the game</span><span class="pt">Ver o jogo</span> →</a>
     </div>
   </section>
-
-  <section id="projects">
-    <h2 class="titulo"><span class="en">Projects</span><span class="pt">Projetos</span></h2>
-    <p class="en projetos-intro">Not everything is a game. Research, tools and engines, mostly from UFF.</p>
-    <p class="pt projetos-intro">Nem tudo é jogo. Pesquisa, ferramentas e engines, quase tudo da UFF.</p>
-    <div class="grade projetos">
-      <a class="cartao projeto" href="power-pplay.html" style="--destaque:#ff3ec8">
-        <div class="miolo logo"><img src="assets/projetos/power-pplay/logo.png" alt="Power PPlay"></div>
-        <h3>Power PPlay</h3>
-        <p class="en">The Python game framework taught at UFF, rebuilt: versions 2.0 and 2.1, with its own IDE.</p>
-        <p class="pt">A framework de jogos em Python ensinada na UFF, reconstruída: versões 2.0 e 2.1, com IDE própria.</p>
-        <div class="meta"><span><i></i>Python · Pygame-CE</span></div>
-      </a>
-      <a class="cartao projeto" href="akuanduba.html" style="--destaque:#39d98a">
-        <div class="miolo foto"><img src="assets/projetos/akuanduba/icarai_3d.jpg" alt="Akuanduba OS"></div>
-        <h3>Akuanduba OS</h3>
-        <p class="en">A digital twin of Niterói's traffic: cameras, graph forecasting, RL traffic lights and ambulance routing.</p>
-        <p class="pt">Um gêmeo digital do trânsito de Niterói: câmeras, previsão em grafo, semáforos por RL e rotas de ambulância.</p>
-        <div class="meta"><span><i></i>PyTorch · RL · OpenCV</span></div>
-      </a>
-      <a class="cartao projeto" href="pesquisa.html" style="--destaque:#4cc9f0">
-        <div class="miolo foto"><img src="assets/projetos/pesquisa/icarai_cameras.jpg" alt="Scientific research"></div>
-        <h3><span class="en">Scientific research</span><span class="pt">Pesquisa científica</span></h3>
-        <p class="en">Computer vision research at Media Lab UFF with a CNPq grant: street cameras as traffic sensors.</p>
-        <p class="pt">Pesquisa em visão computacional no Media Lab UFF com bolsa CNPq: câmeras de rua como sensores de trânsito.</p>
-        <div class="meta"><span><i></i>Media Lab UFF · CNPq</span></div>
-      </a>
-      <a class="cartao projeto" href="athena-nba.html" style="--destaque:#f58a2e">
-        <div class="miolo logo"><img src="assets/projetos/athena-nba/quadra.svg" alt="Project Athena"></div>
-        <h3>Project Athena</h3>
-        <p class="en">NBA AI Engine: predicts the winner and the point spread with a deep residual network. 71.2% accuracy.</p>
-        <p class="pt">NBA AI Engine: prevê o vencedor e o saldo de pontos com uma rede residual profunda. 71,2% de acerto.</p>
-        <div class="meta"><span><i></i>PyTorch · Paper</span></div>
-      </a>
-      <a class="cartao projeto" href="dnd-builder.html" style="--destaque:#e0b23c">
-        <div class="miolo logo"><img src="assets/projetos/dnd-builder/icone.png" alt="Grimório do Mestre"></div>
-        <h3>Grimório do Mestre</h3>
-        <p class="en">D&amp;D Builder: a desktop companion for running D&amp;D 5E, with maps, bestiary, combat and a Telegram crow.</p>
-        <p class="pt">D&amp;D Builder: um app de mesa para mestrar D&amp;D 5E, com mapas, bestiário, combate e um corvo no Telegram.</p>
-        <div class="meta"><span><i></i>Electron · React</span></div>
-      </a>
-    </div>
-  </section>
-
-  <section id="repos">
-    <h2 class="titulo"><span class="en">Public repos</span><span class="pt">Repos públicos</span></h2>
-    <div id="lista-repos" class="grade repos"><p class="carregando">…</p></div>
-  </section>
-
-  <section id="commits" class="placa">
-    <h2>Commits</h2>
-    <p class="contagem"><span id="total-commits">…</span> <span class="en">contributions in the last year</span><span class="pt">contribuições no último ano</span></p>
-    <div class="grafico-envoltorio"><div id="grafico" class="grafico" aria-label="Contribution graph"></div></div>
-    <div class="legenda"><span class="en">less</span><span class="pt">menos</span>
-      <i class="n0"></i><i class="n1"></i><i class="n2"></i><i class="n3"></i><i class="n4"></i>
-      <span class="en">more</span><span class="pt">mais</span></div>
-    <h3><span class="en">Latest pushes</span><span class="pt">Últimos pushes</span></h3>
-    <ul id="atividade" class="atividade"><li class="carregando">…</li></ul>
-  </section>
-
   <section id="contact" class="contato">
     <img src="assets/olhos.gif" alt="" class="faixa pixel">
     <h2 class="titulo"><span class="en">Find me</span><span class="pt">Contato</span></h2>

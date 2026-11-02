@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Code · NEFERO</title>
+<meta name="description" content="Kauã Neves (Neferoo): small, strange games with big atmosphere. Lead director at HFTS Productions.">
+<meta property="og:title" content="NEFERO · Kauã Neves">
+<meta property="og:description" content="Small, strange games with big atmosphere.">
+<meta property="og:image" content="assets/banner.png">
+<link rel="icon" href="assets/avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en">
+
+<header class="topo">
+  <img class="banner pixel" src="assets/banner.gif" alt="NEFERO">
+  <nav>
+    <a href="index.html"><span class="en">Home</span><span class="pt">Início</span></a>
+    <a href="jogos.html"><span class="en">Games</span><span class="pt">Jogos</span></a>
+    <a href="projetos.html"><span class="en">Projects</span><span class="pt">Projetos</span></a>
+    <a href="pesquisa.html"><span class="en">Research</span><span class="pt">Pesquisa</span></a>
+    <a href="codigo.html" class="atual" aria-current="page"><span class="en">Code</span><span class="pt">Código</span></a>
+    <a href="index.html#contact"><span class="en">Find me</span><span class="pt">Contato</span></a>
+    <button id="idioma" type="button" aria-label="Switch language">PT</button>
+  </nav>
+</header>
+
+<main>
+  <section id="repos">
+    <h2 class="titulo"><span class="en">Public repos</span><span class="pt">Repos públicos</span></h2>
+    <div id="lista-repos" class="grade repos"><p class="carregando">…</p></div>
+  </section>
+  <section id="commits" class="placa">
+    <h2>Commits</h2>
+    <p class="contagem"><span id="total-commits">…</span> <span class="en">contributions in the last year</span><span class="pt">contribuições no último ano</span></p>
+    <div class="grafico-envoltorio"><div id="grafico" class="grafico" aria-label="Contribution graph"></div></div>
+    <div class="legenda"><span class="en">less</span><span class="pt">menos</span>
+      <i class="n0"></i><i class="n1"></i><i class="n2"></i><i class="n3"></i><i class="n4"></i>
+      <span class="en">more</span><span class="pt">mais</span></div>
+    <h3><span class="en">Latest pushes</span><span class="pt">Últimos pushes</span></h3>
+    <ul id="atividade" class="atividade"><li class="carregando">…</li></ul>
+  </section>
+</main>
+
+<footer>
+  <img src="assets/bando.gif" alt="" class="faixa pixel">
+  <p><em class="en">Thanks for stopping by. The crow is watching.</em><em class="pt">Valeu pela visita. O corvo tá de olho.</em></p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

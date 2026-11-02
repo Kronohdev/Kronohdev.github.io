@@ -84,6 +84,6 @@ async function carregarAtividade() {
   }
 }
 
-carregarRepos();
-carregarGrafico();
-carregarAtividade();
+if (document.getElementById("lista-repos")) carregarRepos();
+if (document.getElementById("grafico")) carregarGrafico();
+if (document.getElementById("atividade")) carregarAtividade();

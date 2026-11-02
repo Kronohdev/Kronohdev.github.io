@@ -127,7 +127,7 @@ def pagina(j):
 </head>
 <body class="lang-en pagina-jogo" style="--destaque:{v["cor"]};{fundo}">
 <nav class="nav-jogo">
-  <a href="index.html#games">← {t("voltar")}</a>
+  <a href="jogos.html">← {t("voltar")}</a>
   <span class="nome-jogo">{e(j["titulo"])}</span>
   <button id="idioma" type="button" aria-label="Switch language">PT</button>
 </nav>
